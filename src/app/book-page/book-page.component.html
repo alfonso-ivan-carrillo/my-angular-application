@@ -79,23 +79,30 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-body">
+    <div class="card-body mb-2">
       <div class="row">
         <div class="col-3">
           <h3><strong>Book Details:</strong></h3>
           <div *ngIf="isBookSelected">
             <span
-              ><h4>Title: {{ selectedTitle }}</h4></span
+              ><h5>Title: {{ selectedTitle }}</h5></span
             >
             <span
-              ><h4>Author: {{ selectedBook.author }}</h4></span
+              ><h5>Author: {{ selectedBook.author }}</h5></span
             >
             <span
-              ><h4>Year: {{ selectedBook.year }}</h4></span
+              ><h5>Year: {{ selectedBook.year }}</h5></span
             >
             <span
-              ><h4>Genre: {{ selectedBook.genre }}</h4></span
+              ><h5>Genre: {{ selectedBook.genre }}</h5></span
             >
+            <div *ngIf="isCoverPresent" class="img-container" style="width: 150px; height: 200px">
+              <img
+                class="img-fluid"
+                [src]="selectedBook.cover"
+                alt="{{ selectedBook.title }} cover"
+              />
+            </div>
           </div>
         </div>
         <div class="col-3">
@@ -114,7 +121,6 @@
               <span
                 ><h4>Genre: {{ author.genre }}</h4></span
               >
-              <hr />
             </div>
           </div>
         </div>
@@ -151,7 +157,6 @@
               <span
                 ><h4>Genre: {{ genre.genre }}</h4></span
               >
-              <hr />
             </div>
           </div>
         </div>

@@ -21,6 +21,7 @@ export class BookPageComponent implements OnInit {
   isAuthorSelected: boolean = false;
   isYearSelected: boolean = false;
   isGenreSelected: boolean = false;
+  isCoverPresent: boolean = false;
   selectedGenreArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
   testArray: any[] = [{id: 1, name: 'test1'}, {id: 2, name: 'test2'}, {id: 3, name: 'test3'}, {id: 4, name: 'test4'}, {id: 5, name: 'test5'}];
@@ -87,6 +88,9 @@ export class BookPageComponent implements OnInit {
     for (let book of this.books) {
       if (book.title === searchString) {
         this.selectedBook = book;
+        console.log(this.isCoverPresent);
+        this.isCoverPresent = this.displayCover(book.cover);
+        console.log(this.isCoverPresent);
         this.isBookSelected = true;
         this.isAuthorSelected = false;
         this.isGenreSelected = false;
@@ -113,6 +117,16 @@ export class BookPageComponent implements OnInit {
       }
     }
   }
+
+  displayCover(cover: string): boolean {
+    console.log(cover.length);
+    console.log(cover);
+    if (cover.length > 0) {
+        return true;
+  } else {
+    return false;
+  }
+}
 
 
   changePdfName(event: Event): any {
@@ -153,4 +167,6 @@ export class BookPageComponent implements OnInit {
 
     return event;
   }
+
+
 }

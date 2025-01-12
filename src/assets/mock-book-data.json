@@ -5,187 +5,214 @@
             "title": "The Hobbit",
             "author": "J.R.R. Tolkien",
             "year": 1937,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/TheHobbitBookCover.jng"
         },
         {
             "id": 2,
             "title": "The Lord of the Rings",
             "author": "J.R.R. Tolkien",
             "year": 1954,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/LOTR.jpg"
         },
         {
             "id": 3,
             "title": "The Road",
             "author": "Cormac McCarthy",
             "year": 2006,
-            "genre": "post-apocalyptic fiction"
+            "genre": "post-apocalyptic fiction",
+            "cover": "assets/images/The-road.jpg"
         },
         {
             "id": 4,
             "title": "Blood Meridian",  
             "author": "Cormac McCarthy",
             "year": 1985,
-            "genre": "western"
+            "genre": "western",
+            "cover": "assets/images/bloodMeridian.jpg"
         },
         {
             "id": 5,
             "title": "The Hitchhiker's Guide to the Galaxy",
             "author": "Douglas Adams",
             "year": 1978,
-            "genre": "science fiction"
+            "genre": "science fiction",
+            "cover": "theHitchhikersGuideToTheGalaxy.jpeg"
         },
         {
             "id": 6,
             "title": "No Country for Old Men",
             "author": "Cormac McCarthy",
             "year": 2005,
-            "genre": "thriller"
+            "genre": "thriller",
+            "cover": "assets/images/Cormac_McCarthy_NoCountryForOldMen.jpg"
         },
         {
             "id": 7,
             "title": "The Brief Wondrous Life of Oscar Wao",
             "author": "Junot Díaz",
             "year": 2007,
-            "genre": "magical realism"
+            "genre": "magical realism",
+            "cover": "assets/images/TheBriefWondrousLifeOfOscarWao.jpg"
         },
         {
             "id": 8,
             "title": "This is How You Lose Her",
             "author": "Junot Díaz",
             "year": 2012,
-            "genre": "romance"
+            "genre": "romance",
+            "cover": "assets/images/thisIsHowYouLoseHer.jpeg"
         },
         {
             "id": 9,
             "title": "The Catcher in the Rye",
             "author": "J.D. Salinger",
             "year": 1951,
-            "genre": "romance"
+            "genre": "romance",
+            "cover": "assets/images/theCatcherInTheRye.jpg"
         },
         {
             "id": 10,
             "title": "To Kill a Mockingbird",
             "author": "Harper Lee",
             "year": 1960,
-            "genre": "romance"
+            "genre": "romance",
+            "cover": "assets/images/toKillAMockingBird.jpg"
         },
         {
             "id": 11,
             "title": "Drown",
             "author": "Junot Díaz",
             "year": 1996,
-            "genre": "adventure"
+            "genre": "adventure",
+            "cover": "assets/images/drown.jpeg"
         },
         {
             "id": 12,
             "title": "The Adventures of Sherlock Holmes",
             "author": "Arthur Conan Doyle",
             "year": 1899,
-            "genre": "adventure"
+            "genre": "adventure",
+            "cover": "assets/images/theAdventuresOfSherlockHolmes.jpg"
         },
         {
             "id": 13,
             "title": "The Passenger",  
             "author": "Cormac McCarthy",
             "year": 2022,
-            "genre": "fiction"
+            "genre": "fiction",
+            "cover": "assets/images/thePassenger.jpg"
         },
         {
             "id": 14,
             "title": "A Game of Thrones",
             "author": "George R.R. Martin",
             "year": 1996,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/AGameOfThrones.jpg"
         },
         {
             "id": 15,
             "title": "Kings of the Wyld",  
             "author": "Nicholas Eames",
             "year": 2017,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/kingsOfTheWyld.jpg"
         },
         {
             "id": 16,
             "title": "Doctor Sleep",  
             "author": "Stephen King",
             "year": 2013,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/doctorSleep.jpeg"
         },
         {
             "id": 17,
             "title": "The Way of Kings",  
             "author": "Brandon Sanderson",
             "year": 2010,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/kingsOfTheWyld.jpg"
         },
         {
             "id": 18,
             "title": "Mr. Mercedes",  
             "author": "Stephen King",
             "year": 2015,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/mrMercedes.jpg"
         },
         {
             "id": 19,
             "title": "The Dark Tower",  
             "author": "Stephen King",
             "year": 2008,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/theDarkTower.jpg"
         },
         {   "id": 20,
             "title": "The Name of the Wind",
             "author": "Patrick Rothfuss",
             "year": 2013,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/theNameOfTheWind.jpg"
         },
         {
             "id": 21,
             "title": "The Two Towers",  
             "author": "J.R.R. Tolkien",
             "year": 2002,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/theTwoTowers.jpg"
         },
         {   "id": 22,
             "title": "The Blade Itself",
             "author":"Joe Abercrombie",
             "year": 2015,
-            "genre": "fantasy"
+            "genre": "fantasy",
+            "cover": "assets/images/TheBladeItself.jpg"
         },
         {
             "id": 23,
             "title": "Mindhunter",  
             "author": "John E. Douglas",
             "year": 1997,
-            "genre": "true crime"
+            "genre": "true crime",
+            "cover": "assets/images/mindhunter.jpg"
         },
         {
             "id": 24,
             "title": "Stranger Besides Me",
             "author": "Ann Rule",
             "year": 1992,
-            "genre": "true crime"
+            "genre": "true crime",
+            "cover": "assets/images/theStrangerBesidesMe.jpg"
         }, 
         {
             "id": 25,
             "title": "The Silence of the Lambs",
             "author": "Thomas Harris",
             "year": 1991,
-            "genre": "fiction"
+            "genre": "fiction",
+            "cover": "assets/images/theSilenceOfTheLambs.jng"
         },
         {
             "id": 26,
             "title": "The Killer Across the Table",
             "author": "John E. Douglas",
             "year": 2019,
-            "genre": "true crime"
+            "genre": "true crime",
+            "cover": "assets/images/theKillerAcrossTheTable.jpg"
         },
         {
             "id": 27,
             "title": "I'll Be Gone in the Dark",
             "author": "Michelle McNamara",
             "year": 2018,
-            "genre": "true crime"
+            "genre": "true crime",
+            "cover": "assets/images/illBeGoneInTheDark.jpg"
         }
     ]
 }
