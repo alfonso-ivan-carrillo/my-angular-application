@@ -78,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div class="card">
+  <div class="card" *ngIf="!isViewPhoto">
     <div class="card-body mb-2">
       <div class="row">
         <div class="col-3">
@@ -96,12 +96,15 @@
             <span
               ><h5>Genre: {{ selectedBook.genre }}</h5></span
             >
-            <div *ngIf="isCoverPresent" class="img-container" style="width: 150px; height: 200px">
+            <div *ngIf="isCoverPresent" class="img-container" style="width: 100px; height: 150px">
+              
               <img
                 class="img-fluid"
                 [src]="selectedBook.cover"
                 alt="{{ selectedBook.title }} cover"
+                (click)="isViewPhoto = !isViewPhoto"
               />
+
             </div>
           </div>
         </div>
@@ -160,6 +163,27 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card" *ngIf="isViewPhoto">
+  <div class="card-body">
+    <div class="row p-2">
+      <div class="col-12 text-end">
+        <div>
+          <button class="btn btn-primary" (click)="isViewPhoto = false">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <img
+          style="width: 500px; height: 700px"
+          class="img-fluid"
+          [src]="selectedBook.cover"
+          alt="{{ selectedBook.title }} cover"
+        />
       </div>
     </div>
   </div>

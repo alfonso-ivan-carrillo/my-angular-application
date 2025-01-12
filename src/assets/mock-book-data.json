@@ -6,7 +6,7 @@
             "author": "J.R.R. Tolkien",
             "year": 1937,
             "genre": "fantasy",
-            "cover": "assets/images/TheHobbitBookCover.jng"
+            "cover": "assets/images/TheHobbitBookCover.png"
         },
         {
             "id": 2,
@@ -38,7 +38,7 @@
             "author": "Douglas Adams",
             "year": 1978,
             "genre": "science fiction",
-            "cover": "theHitchhikersGuideToTheGalaxy.jpeg"
+            "cover": "assets/images/theHitchhikersGuideToTheGalaxy.jpeg"
         },
         {
             "id": 6,
@@ -54,7 +54,7 @@
             "author": "Junot Díaz",
             "year": 2007,
             "genre": "magical realism",
-            "cover": "assets/images/TheBriefWondrousLifeOfOscarWao.jpg"
+            "cover": "assets/images/theBriefWondrousLifeOfOscarWao.jpg"
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "author": "Junot Díaz",
             "year": 2012,
             "genre": "romance",
-            "cover": "assets/images/thisIsHowYouLoseHer.jpeg"
+            "cover": "assets/images/thisIsHowYouLoseHer.jpg"
         },
         {
             "id": 9,
@@ -78,7 +78,7 @@
             "author": "Harper Lee",
             "year": 1960,
             "genre": "romance",
-            "cover": "assets/images/toKillAMockingBird.jpg"
+            "cover": "assets/images/toKillaMockingbird.jpg"
         },
         {
             "id": 11,
@@ -196,7 +196,7 @@
             "author": "Thomas Harris",
             "year": 1991,
             "genre": "fiction",
-            "cover": "assets/images/theSilenceOfTheLambs.jng"
+            "cover": "assets/images/theSilenceOfTheLambs.png"
         },
         {
             "id": 26,

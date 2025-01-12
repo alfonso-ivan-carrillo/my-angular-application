@@ -22,6 +22,7 @@ export class BookPageComponent implements OnInit {
   isYearSelected: boolean = false;
   isGenreSelected: boolean = false;
   isCoverPresent: boolean = false;
+  isViewPhoto: boolean = false;
   selectedGenreArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
   testArray: any[] = [{id: 1, name: 'test1'}, {id: 2, name: 'test2'}, {id: 3, name: 'test3'}, {id: 4, name: 'test4'}, {id: 5, name: 'test5'}];
