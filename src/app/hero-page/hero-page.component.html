@@ -1,0 +1,81 @@
+
+    <div class="card">
+        <div class="card-body m-1">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 text-center">
+                    <h1>Hero Page</h1>
+                </div>
+                <div class="col-1 mt-3">
+                    <button class="btn btn-primary"
+                    (click)="routePage('/')">Back Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container text-center">
+  <div class="row">
+    <div *ngFor="let peep of ageArray">
+      <span>{{ peep.name }}</span>
+      <span> - {{ peep.age }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-primary" (click)="filterAging(theBandNames)">
+        Filter Button
+      </button>
+    </div>
+  </div>
+</div>
+<br />
+<div class="card-body">
+  <div class="row">
+    <div
+      *ngFor="let chunk of chunkedArray"
+      [ngClass]="isTransformed ? 'transformedForm' : 'normalForm'"
+      class="col-4"
+    >
+      <ul class="list-group list-group-horizontal col-12">
+        <li *ngFor="let item of chunk" class="list-group-item col-6">
+          <input type="checkbox" name="item" value="item.name" />
+          <label [attr.for]="item.name">Name: {{ item.name }}</label>
+          <label [attr.for]="item.age"> - Age: {{ item.age }}</label>
+          <label [attr.for]="item.instrument">
+            - Weapon: {{ item.skill }}</label
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="col-2">
+    <button class="btn btn-info" (click)="chunkingArray(theBandNames)">
+      Chunking Button
+    </button>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div
+        *ngFor="let chunk of chunkedArray"
+        [ngClass]="isTransformed ? 'transformedForm' : 'normalForm'"
+      >
+        <ul class="list-group list-group-horizontal">
+          <li *ngFor="let item of chunk" class="list-group-item col-4">
+            <input type="checkbox" name="item" value="item.name" />
+            <label [attr.for]="item.name">Name: {{ item.name }}</label>
+            <label [attr.for]="item.age"> - Age: {{ item.age }}</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <button class="btn btn-danger" (click)="transformArray(theBandNames)">
+      Sorting Button
+    </button>
+  </div>
+</div>

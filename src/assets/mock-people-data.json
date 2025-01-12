@@ -1,0 +1,83 @@
+{
+    "people":[
+        {
+            "id": 1,
+            "name": "Alfonso Carrillo Jr",
+            "relationship": "self",
+            "age": 49
+        },
+        {
+            "id": 2, 
+            "name": "Kathy Maddocks",
+            "relationship": "wife",
+            "age": 47
+        }, 
+        {
+            "id": 3 ,
+            "name": "Ethan Carrillo" ,
+            "relationship": "son",
+            "age": 20
+        }, 
+        {
+            "id": 4,
+            "name": "Alfonso Carrillo Sr",
+            "relationship": "father",
+            "age": 87
+        },
+        {
+            "id": 5,
+            "name": "Rosalba Carrillo",
+            "relationship": "wife",
+            "age": 79
+        },
+        {
+            "id": 6,
+            "name": "Abel Carrillo",
+            "relationship": "brother",
+            "age": 48
+        },
+        {
+            "id": 7,
+            "name": "Abel Carrillo Jr",
+            "relationship": "nephew",
+            "age": 25
+        },
+        {
+            "id": 8,
+            "name": "Annabel Carrillo",
+            "relationship": "niece",
+            "age": 20
+        },
+        {
+            "id": 9,
+            "name": "Alessio Carrillo",
+            "relationship": "nephew",
+            "age": 8
+        },
+        {
+            "id":  10,
+            "name": "Susan Maddocks",
+            "relationship": "mother in law",
+            "age": 79
+        },
+        {
+            "id": 11,
+            "name": "Karen Maddocks",
+            "relationship": "sister in law",
+            "age": 57
+        }, 
+        {
+            "id": 12,
+            "name": "Kim Maddocks",
+            "relationship": "sister in law",
+            "age": 53
+        },
+        {
+            "id": 13,
+            "name": "Christopher Norwood",
+            "relationship": "nephew",
+            "age": 27
+        }
+    ]
+}
+

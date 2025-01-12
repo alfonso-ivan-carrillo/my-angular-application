@@ -1,0 +1,126 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row border border-primary border-5 p-2">
+      <div class="col-10">
+        <div class="row">
+          <h4 class="col-3">My Living Memory</h4>
+          <h5 class="col-2" (click)="isPonchito = !isPonchito">Ponchito</h5>
+          <h5 class="col-2" (click)="isPoncho = !isPoncho">Poncho</h5>
+          <h5 class="col-2" (click)="isAlfonso = !isAlfonso">Alfonso</h5>
+          <h5 class="col-3" (click)="isWhatShouldBe = !isWhatShouldBe">
+            What should be
+          </h5>
+        </div>
+      </div>
+      <div class="col-2 text-end">
+        <button class="btn btn-primary" (click)="routeToPage('/')">
+          Back Home
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div
+    class="p-1"
+    [ngClass]="
+      isPonchito && isPoncho && isAlfonso && isWhatShouldBe
+        ? 'col-3'
+        : (isPonchito && isPoncho && !isAlfonso && !isWhatShouldBe) ||
+          (isPonchito && isAlfonso && !isPoncho && !isWhatShouldBe) ||
+          (isPonchito && isWhatShouldBe && !isPoncho && !isAlfonso)
+        ? 'col-6'
+        : (isPonchito && isPoncho && isAlfonso && !isWhatShouldBe) ||
+          (isPonchito && isPoncho && isWhatShouldBe && !isAlfonso) ||
+          (isPonchito && isAlfonso && isWhatShouldBe && !isPoncho)
+        ? 'col-4'
+        : 'col-12'
+    "
+    *ngIf="isPonchito"
+  >
+    <app-ponchito></app-ponchito>
+  </div>
+  <div
+    class="p-1"
+    [ngClass]="
+      isPoncho && isPonchito && isAlfonso && isWhatShouldBe
+        ? 'col-3'
+        : (isPoncho && isPonchito && !isAlfonso && !isWhatShouldBe) ||
+          (isPoncho && !isPonchito && isWhatShouldBe && !isAlfonso) ||
+          (isPoncho && isAlfonso && !isWhatShouldBe && !isPonchito)
+        ? 'col-6'
+        : (isPoncho && isPonchito && isAlfonso && !isWhatShouldBe) ||
+          (isPoncho && isAlfonso && !isPonchito && isWhatShouldBe) ||
+          (isPoncho && isWhatShouldBe && isPonchito && !isAlfonso)
+        ? 'col-4'
+        : 'col-12'
+    "
+    *ngIf="isPoncho"
+  >
+    <app-poncho></app-poncho>
+  </div>
+  <div
+    class="p-1"
+    [ngClass]="
+      isAlfonso && isPonchito && isPoncho && isWhatShouldBe
+        ? 'col-3'
+        : (isAlfonso && isPonchito && !isPoncho && !isWhatShouldBe) ||
+          (isAlfonso && !isPonchito && isWhatShouldBe && !isPoncho) ||
+          (isAlfonso && isPoncho && !isWhatShouldBe && !isPonchito)
+        ? 'col-6'
+        : (isAlfonso && isPonchito && isPoncho && !isWhatShouldBe) ||
+          (isAlfonso && isPoncho && !isPonchito && isWhatShouldBe) ||
+          (isAlfonso && isWhatShouldBe && isPonchito && !isPoncho)
+        ? 'col-4'
+        : 'col-12'
+    "
+    *ngIf="isAlfonso"
+  >
+    <app-alfonso></app-alfonso>
+  </div>
+  <div
+    class="p-1"
+    [ngClass]="
+      isWhatShouldBe && isPonchito && isPoncho && isAlfonso
+        ? 'col-3'
+        : (isWhatShouldBe && isPonchito && !isPoncho && !isAlfonso) ||
+          (isWhatShouldBe && !isPonchito && isAlfonso && !isPoncho) ||
+          (isWhatShouldBe && isPoncho && !isAlfonso && !isPonchito)
+        ? 'col-6'
+        : (isWhatShouldBe && isPonchito && isPoncho && !isAlfonso) ||
+          (isWhatShouldBe && isPoncho && !isPonchito && isAlfonso) ||
+          (isWhatShouldBe && isAlfonso && isPonchito && !isPoncho)
+        ? 'col-4'
+        : 'col-12'
+    "
+    *ngIf="isWhatShouldBe"
+  >
+    <app-what-should-be></app-what-should-be>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <li class="col-2" *ngFor="let peep of myPeople">
+        <label [attr.for]="peep.name"> Name: {{ peep.name }}</label>
+        <br />
+        <label [attr.for]="peep.age"> - Age: {{ peep.age }}</label>
+        <br />
+        <label [attr.for]="peep.relationship">
+          - Relationship: {{ peep.relationship }}</label>
+        <br />
+      </li>
+    </div>
+    <hr />
+    <div class="row">
+      <li class="col-2" *ngFor="let pet of pets">
+        <label [attr.for]="pet.name"> Name: {{ pet.name }}</label>
+        <br />
+        <label [attr.for]="pet.age"> - Age: {{ pet.age }}</label>
+        <br />
+        <label [attr.for]="pet.breed"> - Breed: {{ pet.breed }} </label>
+        <br />
+      </li>
+    </div>
+  </div>
+</div>

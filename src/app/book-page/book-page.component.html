@@ -1,0 +1,161 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row text-center">
+      <div class="col-3 text-start">
+        <label>Upload PDF:</label>
+        <input
+          type="file"
+          name="file"
+          id="file"
+          (change)="changePdfName($event)"
+        />
+      </div>
+      <div class="col-6">
+        <h1>Book Page</h1>
+      </div>
+      <div class="col-3 text-end">
+        <button class="btn btn-primary" (click)="routeToPage('/')">
+          Back Home Page
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-3">
+          <label> Title: </label> <br />
+          <select
+            class="col-8"
+            [(ngModel)]="selectedTitle"
+            (change)="displayBookDetails(selectedTitle)"
+          >
+            <option value="">Select Book Title</option>
+            <option *ngFor="let book of books" [value]="book.title">
+              {{ book.title }}
+            </option>
+          </select>
+        </div>
+        <div class="col-3">
+          <label> Author: </label> <br />
+          <select
+            class="col-8"
+            [(ngModel)]="selectedAuthor"
+            (change)="displayBookDetails(selectedAuthor)"
+          >
+            <option value="">Select Author</option>
+            <option *ngFor="let author of authorsArray" [value]="author">
+              {{ author }}
+            </option>
+          </select>
+        </div>
+        <div class="col-3">
+          <label> Year: </label> <br />
+          <select
+            class="col-8"
+            [(ngModel)]="selectedYear"
+            (change)="displayBookDetails(selectedYear)"
+          >
+            <option value="">Select Year</option>
+            <option *ngFor="let year of yearArray" [value]="year">
+              {{ year }}
+            </option>
+          </select>
+        </div>
+        <div class="col-3">
+          <label> Genre: </label> <br />
+          <select
+            class="col-8"
+            [(ngModel)]="selectedGenre"
+            (change)="displayBookDetails(selectedGenre)"
+          >
+            <option value="">Select Genre</option>
+            <option *ngFor="let genre of genreArray" [value]="genre">
+              {{ genre }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-3">
+          <h3><strong>Book Details:</strong></h3>
+          <div *ngIf="isBookSelected">
+            <span
+              ><h4>Title: {{ selectedTitle }}</h4></span
+            >
+            <span
+              ><h4>Author: {{ selectedBook.author }}</h4></span
+            >
+            <span
+              ><h4>Year: {{ selectedBook.year }}</h4></span
+            >
+            <span
+              ><h4>Genre: {{ selectedBook.genre }}</h4></span
+            >
+          </div>
+        </div>
+        <div class="col-3">
+          <h3><strong>Book by Author:</strong></h3>
+          <div *ngIf="isAuthorSelected">
+            <div *ngFor="let author of selectedAuthorArray">
+              <span
+                ><h4>Title: {{ author.title }}</h4></span
+              >
+              <span
+                ><h4>Author: {{ author.author }}</h4></span
+              >
+              <span
+                ><h4>Year: {{ author.year }}</h4></span
+              >
+              <span
+                ><h4>Genre: {{ author.genre }}</h4></span
+              >
+              <hr />
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <h3><strong>Books by Year:</strong></h3>
+          <div *ngIf="isYearSelected">
+            <span
+              ><h4>Title: {{ selectedBook.title }}</h4></span
+            >
+            <span
+              ><h4>Author: {{ selectedBook.author }}</h4></span
+            >
+            <span
+              ><h4>Year: {{ selectedYear }}</h4></span
+            >
+            <span
+              ><h4>Genre: {{ selectedBook.genre }}</h4></span
+            >
+          </div>
+        </div>
+        <div class="col-3">
+          <h3><strong>Books by Genre:</strong></h3>
+          <div *ngIf="isGenreSelected">
+            <div *ngFor="let genre of selectedGenreArray">
+              <span
+                ><h4>Title: {{ genre.title }}</h4></span
+              >
+              <span
+                ><h4>Author: {{ genre.author }}</h4></span
+              >
+              <span
+                ><h4>Year: {{ genre.year }}</h4></span
+              >
+              <span
+                ><h4>Genre: {{ genre.genre }}</h4></span
+              >
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

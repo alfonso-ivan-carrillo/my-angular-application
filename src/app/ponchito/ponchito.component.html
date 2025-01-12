@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="row">
+        <div class="col text-center">
+            <h4>Ponchito</h4>
+            <span>Age: 1 through 10 years</span><br>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-4"  *ngIf="!isFiltered">
+            <div *ngFor="let peep of myFamily" 
+                [(ngModel)]="myFamily" 
+                ngDefaultControl
+                >
+                <span [attr.for]="peep.name">Name: {{ peep.name }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-4" *ngIf="isFiltered">
+            <div *ngFor="let peep of filteredFamily" 
+                [(ngModel)]="filteredFamily"
+                ngDefaultControl
+            > 
+                <span>Name: {{ peep.name }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center"> 
+        <div class="col-3">
+            <button
+             class="btn btn-primary"
+             (click)="familyFilter(myFamily)"
+            >Filter Family</button>
+        </div>
+    </div>
+    
+</div>

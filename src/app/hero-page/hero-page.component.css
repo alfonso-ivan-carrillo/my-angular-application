@@ -1,0 +1,12 @@
+.normalForm {
+    background-color: lightgray;
+  }
+  
+  .transformedForm {
+    background-color: lightgreen;
+  }
+  
+  .container {
+    background-color: lightgray;
+    border: 5px   solid black;
+  }
