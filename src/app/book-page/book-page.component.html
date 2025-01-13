@@ -20,64 +20,71 @@
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-3">
-          <label> Title: </label> <br />
-          <select
-            class="col-8"
-            [(ngModel)]="selectedTitle"
-            (change)="displayBookDetails(selectedTitle)"
-          >
-            <option value="">Select Book Title</option>
-            <option *ngFor="let book of books" [value]="book.title">
-              {{ book.title }}
-            </option>
-          </select>
+
+  <div class="container">
+    <div class="card search-bar p-1">
+      <div class="card-body">
+        <div class="row">
+          <h5>Search Bar:</h5>
         </div>
-        <div class="col-3">
-          <label> Author: </label> <br />
-          <select
-            class="col-8"
-            [(ngModel)]="selectedAuthor"
-            (change)="displayBookDetails(selectedAuthor)"
-          >
-            <option value="">Select Author</option>
-            <option *ngFor="let author of authorsArray" [value]="author">
-              {{ author }}
-            </option>
-          </select>
-        </div>
-        <div class="col-3">
-          <label> Year: </label> <br />
-          <select
-            class="col-8"
-            [(ngModel)]="selectedYear"
-            (change)="displayBookDetails(selectedYear)"
-          >
-            <option value="">Select Year</option>
-            <option *ngFor="let year of yearArray" [value]="year">
-              {{ year }}
-            </option>
-          </select>
-        </div>
-        <div class="col-3">
-          <label> Genre: </label> <br />
-          <select
-            class="col-8"
-            [(ngModel)]="selectedGenre"
-            (change)="displayBookDetails(selectedGenre)"
-          >
-            <option value="">Select Genre</option>
-            <option *ngFor="let genre of genreArray" [value]="genre">
-              {{ genre }}
-            </option>
-          </select>
+        <div class="row p-1">
+          <div class="col-3">
+            <label> Title: </label> <br />
+            <select
+              class="col-8"
+              [(ngModel)]="selectedTitle"
+              (change)="displayBookDetails(selectedTitle)"
+            >
+              <option value="">Select Book Title</option>
+              <option *ngFor="let book of books" [value]="book.title">
+                {{ book.title }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3">
+            <label> Author: </label> <br />
+            <select
+              class="col-8"
+              [(ngModel)]="selectedAuthor"
+              (change)="displayBookDetails(selectedAuthor)"
+            >
+              <option value="">Select Author</option>
+              <option *ngFor="let author of authorsArray" [value]="author">
+                {{ author }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3">
+            <label> Year: </label> <br />
+            <select
+              class="col-8"
+              [(ngModel)]="selectedYear"
+              (change)="displayBookDetails(selectedYear)"
+            >
+              <option value="">Select Year</option>
+              <option *ngFor="let year of yearArray" [value]="year">
+                {{ year }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3">
+            <label> Genre: </label> <br />
+            <select
+              class="col-8"
+              [(ngModel)]="selectedGenre"
+              (change)="displayBookDetails(selectedGenre)"
+            >
+              <option value="">Select Genre</option>
+              <option *ngFor="let genre of genreArray" [value]="genre">
+                {{ genre }}
+              </option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="card" *ngIf="!isViewPhoto">
     <div class="card-body mb-2">
       <div class="row">
@@ -96,15 +103,17 @@
             <span
               ><h5>Genre: {{ selectedBook.genre }}</h5></span
             >
-            <div *ngIf="isCoverPresent" class="img-container" style="width: 100px; height: 150px">
-              
+            <div
+              *ngIf="isCoverPresent"
+              class="img-container"
+              style="width: 100px; height: 150px"
+            >
               <img
                 class="img-fluid"
                 [src]="selectedBook.cover"
                 alt="{{ selectedBook.title }} cover"
                 (click)="isViewPhoto = !isViewPhoto"
               />
-
             </div>
           </div>
         </div>
@@ -124,6 +133,18 @@
               <span
                 ><h4>Genre: {{ author.genre }}</h4></span
               >
+              <div
+              *ngIf="isCoverPresent"
+              class="img-container"
+              style="width: 100px; height: 150px"
+            >
+              <img
+                class="img-fluid"
+                [src]="author.cover"
+                alt="{{ author.title }} cover"
+                (click)="isViewPhoto = !isViewPhoto"
+              />
+            </div>
             </div>
           </div>
         </div>
@@ -167,12 +188,15 @@
     </div>
   </div>
 </div>
+
 <div class="card" *ngIf="isViewPhoto">
   <div class="card-body">
     <div class="row p-2">
       <div class="col-12 text-end">
         <div>
-          <button class="btn btn-primary" (click)="isViewPhoto = false">Close</button>
+          <button class="btn btn-danger" (click)="isViewPhoto = false">
+            Close
+          </button>
         </div>
       </div>
     </div>

@@ -1,0 +1,7 @@
+.search-bar {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgb(175, 192, 222);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

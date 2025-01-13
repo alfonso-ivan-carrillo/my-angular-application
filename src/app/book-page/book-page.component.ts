@@ -6,6 +6,7 @@ import { BookAPIService } from '../services/bookAPI.service';
 @Component({
   selector: 'app-book-page',
   templateUrl: './book-page.component.html',
+  styleUrls: ['./book-page.component.css']
 })
 export class BookPageComponent implements OnInit {
   books: Book[] = [];
@@ -23,6 +24,10 @@ export class BookPageComponent implements OnInit {
   isGenreSelected: boolean = false;
   isCoverPresent: boolean = false;
   isViewPhoto: boolean = false;
+  isDetailsCover: boolean = false;
+  isAuthorCover: boolean = false;
+  isYearCover: boolean = false;
+  isGenreCover: boolean = false;
   selectedGenreArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
   testArray: any[] = [{id: 1, name: 'test1'}, {id: 2, name: 'test2'}, {id: 3, name: 'test3'}, {id: 4, name: 'test4'}, {id: 5, name: 'test5'}];
@@ -55,8 +60,6 @@ export class BookPageComponent implements OnInit {
   }
 
   removeAuthorDupes(books: Book[]) {
-    // const uniqueAuthors = [...new Set(books.map(book => book.author))];
-    // console.log(uniqueAuthors);
     let tempArray = [];
     for (let book of this.books) {
       tempArray.push(book.author);
@@ -69,19 +72,16 @@ export class BookPageComponent implements OnInit {
   removeGenreDupes(books: Book[]) {
     this.genreArray = [...new Set(books.map((book) => book.genre))];
     this.genreArray = this.sortArrayAsscending(this.genreArray);
-    console.log(this.genreArray);
   }
 
   removeYearDupes(books: Book[]) {
     this.yearArray = [...new Set(books.map((book) => book.year))].sort(
       (a, b) => a - b
     );
-    console.log(this.yearArray);
   }
 
   sortArrayAsscending(array: any[]) {
     return array.sort((a, b) => a.localeCompare(b));
-    console.log(array);
   }
 
   displayBookDetails(searchString: string) {
@@ -89,25 +89,33 @@ export class BookPageComponent implements OnInit {
     for (let book of this.books) {
       if (book.title === searchString) {
         this.selectedBook = book;
-        console.log(this.isCoverPresent);
         this.isCoverPresent = this.displayCover(book.cover);
-        console.log(this.isCoverPresent);
         this.isBookSelected = true;
         this.isAuthorSelected = false;
         this.isGenreSelected = false;
-        console.log(this.selectedBook.year);
+        this.selectedAuthor = "";
+        this.selectedGenre = "";
+        this.selectedYear = "";
       } else if (book.author === searchString) {
         tempArray.push(book);
         this.selectedAuthorArray = tempArray;
         this.isAuthorSelected = true;
         this.isBookSelected = false;
         this.isGenreSelected = false;
+        this.isCoverPresent = this.displayCover(book.cover);
+        this.selectedTitle = "";
+        this.selectedGenre = "";
+        this.selectedYear = "";
       } else if (book.year.toString() === searchString) {
         this.selectedBook = book;
         this.isYearSelected = true;
         this.isBookSelected = false;
         this.isAuthorSelected = false;
         this.isGenreSelected = false;
+        this.isCoverPresent = this.displayCover(book.cover);
+        this.selectedTitle = "";
+        this.selectedGenre = "";
+        this.selectedAuthor = "";
       } else if (book.genre === searchString) {
         tempArray.push(book);
         this.selectedGenreArray = tempArray;
@@ -115,6 +123,10 @@ export class BookPageComponent implements OnInit {
         this.isBookSelected = false;
         this.isAuthorSelected = false;
         this.isYearSelected = false;
+        this.isCoverPresent = this.displayCover(book.cover);
+        this.selectedTitle = "";
+        this.selectedAuthor = "";
+        this.selectedYear = "";
       }
     }
   }
