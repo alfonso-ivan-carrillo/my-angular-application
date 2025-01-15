@@ -24,12 +24,15 @@ export class BookPageComponent implements OnInit {
   isGenreSelected: boolean = false;
   isCoverPresent: boolean = false;
   isViewPhoto: boolean = false;
-  isDetailsCover: boolean = false;
+  isTitleCover: boolean = false;
   isAuthorCover: boolean = false;
   isYearCover: boolean = false;
   isGenreCover: boolean = false;
+  isCoverBook: boolean = false;
   selectedGenreArray: Book[] = [];
+  selectedYearArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
+  coverBook: Book;
   testArray: any[] = [{id: 1, name: 'test1'}, {id: 2, name: 'test2'}, {id: 3, name: 'test3'}, {id: 4, name: 'test4'}, {id: 5, name: 'test5'}];
 
   constructor(private router: Router, private bookService: BookAPIService) {}
@@ -84,6 +87,16 @@ export class BookPageComponent implements OnInit {
     return array.sort((a, b) => a.localeCompare(b));
   }
 
+  displayAuthorCover(id: number) {
+   for(const book of this.books){
+    if(book.id === id){
+        this.coverBook = book;
+        this.isCoverBook = true;
+        console.log(this.coverBook);
+    }
+   }
+  }
+
   displayBookDetails(searchString: string) {
     let tempArray = [];
     for (let book of this.books) {
@@ -100,6 +113,7 @@ export class BookPageComponent implements OnInit {
         tempArray.push(book);
         this.selectedAuthorArray = tempArray;
         this.isAuthorSelected = true;
+        this.isYearSelected = false;
         this.isBookSelected = false;
         this.isGenreSelected = false;
         this.isCoverPresent = this.displayCover(book.cover);
@@ -107,7 +121,8 @@ export class BookPageComponent implements OnInit {
         this.selectedGenre = "";
         this.selectedYear = "";
       } else if (book.year.toString() === searchString) {
-        this.selectedBook = book;
+        tempArray.push(book);
+        this.selectedYearArray = tempArray;
         this.isYearSelected = true;
         this.isBookSelected = false;
         this.isAuthorSelected = false;
