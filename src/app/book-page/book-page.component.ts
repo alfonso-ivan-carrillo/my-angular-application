@@ -24,15 +24,12 @@ export class BookPageComponent implements OnInit {
   isGenreSelected: boolean = false;
   isCoverPresent: boolean = false;
   isViewPhoto: boolean = false;
-  isTitleCover: boolean = false;
-  isAuthorCover: boolean = false;
-  isYearCover: boolean = false;
-  isGenreCover: boolean = false;
   isCoverBook: boolean = false;
   selectedGenreArray: Book[] = [];
   selectedYearArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
   coverBook: Book;
+  randoBook: Book;
   testArray: any[] = [{id: 1, name: 'test1'}, {id: 2, name: 'test2'}, {id: 3, name: 'test3'}, {id: 4, name: 'test4'}, {id: 5, name: 'test5'}];
 
   constructor(private router: Router, private bookService: BookAPIService) {}
@@ -40,11 +37,12 @@ export class BookPageComponent implements OnInit {
   ngOnInit(): void {
     this.bookService.getBooks().subscribe((data) => {
       this.books = data;
-      console.log(this.books);
       this.removeAuthorDupes(this.books);
       this.removeGenreDupes(this.books);
       this.removeYearDupes(this.books);
+      this.randomBook();
     });
+    
   }
 
   routeToPage(page: String) {
@@ -92,7 +90,6 @@ export class BookPageComponent implements OnInit {
     if(book.id === id){
         this.coverBook = book;
         this.isCoverBook = true;
-        console.log(this.coverBook);
     }
    }
   }
@@ -147,14 +144,23 @@ export class BookPageComponent implements OnInit {
   }
 
   displayCover(cover: string): boolean {
-    console.log(cover.length);
-    console.log(cover);
     if (cover.length > 0) {
         return true;
   } else {
     return false;
   }
 }
+
+randomBook(){
+    let numOfBooks = this.books.length;
+    let randomBook = Math.floor(Math.random() * numOfBooks);
+    for(const book of this.books){
+        if(book.id === randomBook){
+            this.randoBook = book;
+        }
+    }
+}
+
 
 
   changePdfName(event: Event): any {
