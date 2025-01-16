@@ -31,7 +31,7 @@
           <div class="col-3">
             <label> Title: </label> <br />
             <select
-              class="col-8"
+              class="col-10"
               [disabled]="isViewPhoto"
               [(ngModel)]="selectedTitle"
               (change)="displayBookDetails(selectedTitle)"
@@ -45,7 +45,7 @@
           <div class="col-3">
             <label> Author: </label> <br />
             <select
-              class="col-8"
+              class="col-10"
               [disabled]="isViewPhoto"
               [(ngModel)]="selectedAuthor"
               (change)="displayBookDetails(selectedAuthor)"
@@ -56,10 +56,10 @@
               </option>
             </select>
           </div>
-          <div class="col-3">
+          <div class="col-2">
             <label> Year: </label> <br />
             <select
-              class="col-8"
+              class="col-10"
               [disabled]="isViewPhoto"
               [(ngModel)]="selectedYear"
               (change)="displayBookDetails(selectedYear)"
@@ -70,10 +70,10 @@
               </option>
             </select>
           </div>
-          <div class="col-3">
+          <div class="col-2">
             <label> Genre: </label> <br />
             <select
-              class="col-8"
+              class="col-10"
               [disabled]="isViewPhoto"
               [(ngModel)]="selectedGenre"
               (change)="displayBookDetails(selectedGenre)"
@@ -83,6 +83,11 @@
                 {{ genre }}
               </option>
             </select>
+          </div>
+          <div class="col-2 mt-2">
+            <button class="btn btn-primary"
+            (click)="randomBook()"
+            >Random Book</button>
           </div>
         </div>
       </div>
@@ -226,6 +231,28 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-12">
+    <span>Name:  {{ randoBook.title | titlecase}} </span><br>
+    <span>Name:  {{ randoBook.author | titlecase}} </span><br>
+    <span>Year:  {{ randoBook.year | number}} </span><br>
+    <span>Name:  {{ randoBook.genre | titlecase}} </span><br>
+    <span
+                
+                class="img-container"
+                style="width: 100px; height: 150px"
+              >
+                <img
+                  class="img-fluid"
+                  [src]="randoBook.cover"
+                  alt="{{ randoBook.title }} cover"
+                />
+  </span>
+
+  </div>
+
 </div>
 
 <div class="card" *ngIf="isViewPhoto">

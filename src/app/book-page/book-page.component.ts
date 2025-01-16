@@ -25,6 +25,7 @@ export class BookPageComponent implements OnInit {
   isCoverPresent: boolean = false;
   isViewPhoto: boolean = false;
   isCoverBook: boolean = false;
+  isRandoBook: boolean = false;
   selectedGenreArray: Book[] = [];
   selectedYearArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
@@ -40,7 +41,6 @@ export class BookPageComponent implements OnInit {
       this.removeAuthorDupes(this.books);
       this.removeGenreDupes(this.books);
       this.removeYearDupes(this.books);
-      this.randomBook();
     });
     
   }
@@ -157,6 +157,9 @@ randomBook(){
     for(const book of this.books){
         if(book.id === randomBook){
             this.randoBook = book;
+            this.isRandoBook = true;
+            console.log(this.randoBook);
+            console.log(this.isRandoBook);
         }
     }
 }
