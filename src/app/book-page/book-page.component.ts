@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Book } from '../models/Books.model';
 import { BookAPIService } from '../services/bookAPI.service';
+import { RandomBookModalComponent } from '../random-book-modal/random-book-modal.component';
 
 @Component({
   selector: 'app-book-page',
@@ -26,6 +27,7 @@ export class BookPageComponent implements OnInit {
   isViewPhoto: boolean = false;
   isCoverBook: boolean = false;
   isRandoBook: boolean = false;
+  selectedRandomBook: Book;
   selectedGenreArray: Book[] = [];
   selectedYearArray: Book[] = [];
   selectedAuthorArray: Book[] = [];
@@ -151,17 +153,9 @@ export class BookPageComponent implements OnInit {
   }
 }
 
-randomBook(){
-    let numOfBooks = this.books.length;
-    let randomBook = Math.floor(Math.random() * numOfBooks);
-    for(const book of this.books){
-        if(book.id === randomBook){
-            this.randoBook = book;
-            this.isRandoBook = true;
-            console.log(this.randoBook);
-            console.log(this.isRandoBook);
-        }
-    }
+openRandomBookModal(): void{
+    let randomIndex = Math.floor(Math.random() * this.books.length);
+    this.selectedRandomBook = this.books[randomIndex];
 }
 
 

@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FamilyPageComponent } from './family-page/family-page.component';
 import { PicturePageComponent } from './picture-page/picture-page.component';
 import { StoicPageComponent } from './stoic-page/stoic-page.component';
+import { RandomBookModalComponent } from './random-book-modal/random-book-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { StoicPageComponent } from './stoic-page/stoic-page.component';
     HeroPageComponent,
     FamilyPageComponent,
     PicturePageComponent,
-    StoicPageComponent
+    StoicPageComponent,
+    RandomBookModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -86,7 +86,7 @@
           </div>
           <div class="col-2 mt-2">
             <button class="btn btn-primary"
-            (click)="randomBook()"
+            (click)="openRandomBookModal()"
             >Random Book</button>
           </div>
         </div>
@@ -233,28 +233,6 @@
   </div>
 </div>
 
-<div class="row text-center">
-  <div class="col-12">
-    <span>Name:  {{ randoBook.title | titlecase}} </span><br>
-    <span>Name:  {{ randoBook.author | titlecase}} </span><br>
-    <span>Year:  {{ randoBook.year | number}} </span><br>
-    <span>Name:  {{ randoBook.genre | titlecase}} </span><br>
-    <span
-                
-                class="img-container"
-                style="width: 100px; height: 150px"
-              >
-                <img
-                  class="img-fluid"
-                  [src]="randoBook.cover"
-                  alt="{{ randoBook.title }} cover"
-                />
-  </span>
-
-  </div>
-
-</div>
-
 <div class="card" *ngIf="isViewPhoto">
   <div class="card-body">
     <div class="row p-2">
@@ -278,3 +256,8 @@
     </div>
   </div>
 </div>
+
+<app-random-book-modal
+  [chosenRandomBook]="selectedRandomBook"
+  
+></app-random-book-modal>
