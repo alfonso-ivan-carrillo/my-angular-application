@@ -1,23 +1,33 @@
 <div class="container">
-    <div class="row text-center">
-        <h2>Selected Random Book</h2>
-        <div class="col-6 text-end">
-            
-            <span>Title: {{ chosenRandomBook.title | titlecase }} </span><br>
-            <span>Author: {{ chosenRandomBook.author | titlecase}}</span><br>
-            <span>Year: {{ chosenRandomBook.year }}</span><br>
-            <span>Genre: {{ chosenRandomBook.genre | titlecase}}</span><br>
-        </div>
-            <div 
-            class="img-container text-start col-6"
-            style="width: 300px; height: 500px"
-            >
-                <img
-                  class="img-fluid"
-                  [src]="chosenRandomBook.cover"
-                  alt="{{ chosenRandomBook.title }} cover"
-                />
-            </div>
-        
+  <div class="row text-center mb-3">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h2>Selected Random Book</h2>
     </div>
+    <div class="col-4 text-end">
+      <button class="btn btn-primary">X</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-3 text-start">
+      <span>Title: {{ chosenRandomBook.title | titlecase }} </span><br />
+      <span>Author: {{ chosenRandomBook.author | titlecase }}</span
+      ><br />
+      <span>Year: {{ chosenRandomBook.year }}</span
+      ><br />
+      <span>Genre: {{ chosenRandomBook.genre | titlecase }}</span
+      ><br />
+    </div>
+    <div
+      class="img-container text-start col-6"
+      style="width: 300px; height: 500px"
+    >
+      <img
+        class="img-fluid"
+        [src]="chosenRandomBook.cover"
+        alt="{{ chosenRandomBook.title }} cover"
+      />
+    </div>
+  </div>
 </div>

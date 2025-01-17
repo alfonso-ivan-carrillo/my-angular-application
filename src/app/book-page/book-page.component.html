@@ -86,7 +86,7 @@
           </div>
           <div class="col-2 mt-2">
             <button class="btn btn-primary"
-            (click)="openRandomBookModal()"
+            (click)="getRandomBook(); opendModal()"
             >Random Book</button>
           </div>
         </div>
@@ -258,6 +258,7 @@
 </div>
 
 <app-random-book-modal
+  *ngIf="selectedRandomBook"
   [chosenRandomBook]="selectedRandomBook"
   
 ></app-random-book-modal>

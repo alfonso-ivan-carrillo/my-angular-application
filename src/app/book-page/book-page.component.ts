@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Book } from '../models/Books.model';
 import { BookAPIService } from '../services/bookAPI.service';
 import { RandomBookModalComponent } from '../random-book-modal/random-book-modal.component';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-book-page',
@@ -35,7 +36,15 @@ export class BookPageComponent implements OnInit {
   randoBook: Book;
   testArray: any[] = [{id: 1, name: 'test1'}, {id: 2, name: 'test2'}, {id: 3, name: 'test3'}, {id: 4, name: 'test4'}, {id: 5, name: 'test5'}];
 
-  constructor(private router: Router, private bookService: BookAPIService) {}
+  constructor(
+    private router: Router, 
+    private bookService: BookAPIService,
+    private modalService: ModalService
+    ) {
+        this.modalService.getModalOpen$().subscribe(() => {
+            this.getRandomBook();
+        })
+    }
 
   ngOnInit(): void {
     this.bookService.getBooks().subscribe((data) => {
@@ -153,9 +162,13 @@ export class BookPageComponent implements OnInit {
   }
 }
 
-openRandomBookModal(): void{
+getRandomBook(): void{
     let randomIndex = Math.floor(Math.random() * this.books.length);
     this.selectedRandomBook = this.books[randomIndex];
+}
+
+opendModal(){
+    this.modalService.openModal();
 }
 
 
