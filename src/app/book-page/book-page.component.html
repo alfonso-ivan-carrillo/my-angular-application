@@ -85,9 +85,12 @@
             </select>
           </div>
           <div class="col-2 mt-2">
-            <button class="btn btn-primary"
-            (click)="getRandomBook(); opendModal()"
-            >Random Book</button>
+            <button
+              class="btn btn-primary"
+              (click)="getRandomBook(); opendModal()"
+            >
+              Random Book
+            </button>
           </div>
         </div>
       </div>
@@ -97,134 +100,183 @@
   <div class="card" *ngIf="!isViewPhoto">
     <div class="card-body mb-2">
       <div class="row">
-        <div class="col-3">
-          <h3><strong>Book Details:</strong></h3>
-          <div *ngIf="isBookSelected">
-            <span
-              ><h5>Title: {{ selectedTitle }}</h5></span
-            >
-            <span
-              ><h5>Author: {{ selectedBook.author }}</h5></span
-            >
-            <span
-              ><h5>Year: {{ selectedBook.year }}</h5></span
-            >
-            <span
-              ><h5>Genre: {{ selectedBook.genre }}</h5></span
-            >
-            <div
-              *ngIf="isCoverPresent"
-              class="img-container"
-              style="width: 100px; height: 150px"
-            >
-              <img
-                class="img-fluid"
-                [src]="selectedBook.cover"
-                alt="{{ selectedBook.title }} cover"
-                (click)="
-                  isViewPhoto = !isViewPhoto;
-                  displayAuthorCover(selectedBook.id)
-                "
-              />
+        <div class="col-3" *ngIf="isBookSelected">
+          <div class="row">
+            <div class="col-11">
+              <h3><strong>Book Details:</strong></h3>
+              <div>
+                <span
+                  ><h5>Title: {{ selectedTitle }}</h5></span
+                >
+                <span
+                  ><h5>Author: {{ selectedBook.author }}</h5></span
+                >
+                <span
+                  ><h5>Year: {{ selectedBook.year }}</h5></span
+                >
+                <span
+                  ><h5>Genre: {{ selectedBook.genre }}</h5></span
+                >
+                <div
+                  *ngIf="isCoverPresent"
+                  class="img-container"
+                  style="width: 100px; height: 150px"
+                >
+                  <img
+                    class="img-fluid"
+                    [src]="selectedBook.cover"
+                    alt="{{ selectedBook.title }} cover"
+                    (click)="
+                      isViewPhoto = !isViewPhoto;
+                      displayAuthorCover(selectedBook.id)
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <button
+                (click)="isBookSelected = !isBookSelected"
+                class="btn btn-danger"
+              >
+                <span>X</span>
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <h3><strong>Book by Author:</strong></h3>
-          <div *ngIf="isAuthorSelected">
-            <div *ngFor="let author of selectedAuthorArray" class="mb-3">
-              <span
-                ><h4>Title: {{ author.title }}</h4></span
-              >
-              <span
-                ><h4>Author: {{ author.author }}</h4></span
-              >
-              <span
-                ><h4>Year: {{ author.year }}</h4></span
-              >
-              <span
-                ><h4>Genre: {{ author.genre }}</h4></span
-              >
-              <div
-                *ngIf="isCoverPresent"
-                class="img-container"
-                style="width: 100px; height: 150px"
-              >
-                <img
-                  class="img-fluid"
-                  [src]="author.cover"
-                  alt="{{ author.title }} cover"
-                  (click)="
-                    isViewPhoto = !isViewPhoto; displayAuthorCover(author.id)
-                  "
-                />
+        <div class="col-3" *ngIf="isAuthorSelected">
+          <div class="row">
+            <div class="col-11">
+              <h3><strong>Book by Author:</strong></h3>
+              <div>
+                <div *ngFor="let author of selectedAuthorArray" class="mb-3">
+                  <span
+                    ><h4>Title: {{ author.title }}</h4></span
+                  >
+                  <span
+                    ><h4>Author: {{ author.author }}</h4></span
+                  >
+                  <span
+                    ><h4>Year: {{ author.year }}</h4></span
+                  >
+                  <span
+                    ><h4>Genre: {{ author.genre }}</h4></span
+                  >
+                  <div
+                    *ngIf="isCoverPresent"
+                    class="img-container"
+                    style="width: 100px; height: 150px"
+                  >
+                    <img
+                      class="img-fluid"
+                      [src]="author.cover"
+                      alt="{{ author.title }} cover"
+                      (click)="
+                        isViewPhoto = !isViewPhoto;
+                        displayAuthorCover(author.id)
+                      "
+                    />
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="col-1">
+              <button
+                (click)="isAuthorSelected = !isAuthorSelected"
+                class="btn btn-danger"
+              >
+                <span>X</span>
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <h3><strong>Books by Year:</strong></h3>
-          <div *ngIf="isYearSelected">
-            <div *ngFor="let year of selectedYearArray" class="mb-3">
-            <span
-              ><h4>Title: {{ year.title }}</h4></span
-            >
-            <span
-              ><h4>Author: {{ year.author }}</h4></span
-            >
-            <span
-              ><h4>Year: {{ year.year }}</h4></span
-            >
-            <span
-              ><h4>Genre: {{ year.genre }}</h4></span
-            >
-            <div
-                *ngIf="isCoverPresent"
-                class="img-container"
-                style="width: 100px; height: 150px"
-              >
-                <img
-                  class="img-fluid"
-                  [src]="year.cover"
-                  alt="{{ year.title }} cover"
-                  (click)="
-                    isViewPhoto = !isViewPhoto; displayAuthorCover(year.id)
-                  "
-                />
+        <div class="col-3" *ngIf="isYearSelected">
+          <div class="row">
+            <div class="col-11">
+              <h3><strong>Books by Year:</strong></h3>
+              <div>
+                <div *ngFor="let year of selectedYearArray" class="mb-3">
+                  <span
+                    ><h4>Title: {{ year.title }}</h4></span
+                  >
+                  <span
+                    ><h4>Author: {{ year.author }}</h4></span
+                  >
+                  <span
+                    ><h4>Year: {{ year.year }}</h4></span
+                  >
+                  <span
+                    ><h4>Genre: {{ year.genre }}</h4></span
+                  >
+                  <div
+                    *ngIf="isCoverPresent"
+                    class="img-container"
+                    style="width: 100px; height: 150px"
+                  >
+                    <img
+                      class="img-fluid"
+                      [src]="year.cover"
+                      alt="{{ year.title }} cover"
+                      (click)="
+                        isViewPhoto = !isViewPhoto; displayAuthorCover(year.id)
+                      "
+                    />
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="col-1">
+              <button
+                (click)="isYearSelected = !isYearSelected"
+                class="btn btn-danger"
+              >
+                <span>X</span>
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <h3><strong>Books by Genre:</strong></h3>
-          <div *ngIf="isGenreSelected">
-            <div *ngFor="let genre of selectedGenreArray" class="mb-3">
-              <span
-                ><h4>Title: {{ genre.title }}</h4></span
-              >
-              <span
-                ><h4>Author: {{ genre.author }}</h4></span
-              >
-              <span
-                ><h4>Year: {{ genre.year }}</h4></span
-              >
-              <span
-                ><h4>Genre: {{ genre.genre }}</h4></span
-              >
-              <div
-                *ngIf="isCoverPresent"
-                class="img-container"
-                style="width: 100px; height: 150px"
-              >
-                <img
-                  class="img-fluid"
-                  [src]="genre.cover"
-                  alt="{{ genre.title }} cover"
-                  (click)="
-                    isViewPhoto = !isViewPhoto; displayAuthorCover(genre.id)
-                  "
-                />
+        <div class="col-3" *ngIf="isGenreSelected">
+          <div class="row">
+            <div class="col-11">
+              <h3><strong>Books by Genre:</strong></h3>
+              <div>
+                <div *ngFor="let genre of selectedGenreArray" class="mb-3">
+                  <span
+                    ><h4>Title: {{ genre.title }}</h4></span
+                  >
+                  <span
+                    ><h4>Author: {{ genre.author }}</h4></span
+                  >
+                  <span
+                    ><h4>Year: {{ genre.year }}</h4></span
+                  >
+                  <span
+                    ><h4>Genre: {{ genre.genre }}</h4></span
+                  >
+                  <div
+                    *ngIf="isCoverPresent"
+                    class="img-container"
+                    style="width: 100px; height: 150px"
+                  >
+                    <img
+                      class="img-fluid"
+                      [src]="genre.cover"
+                      alt="{{ genre.title }} cover"
+                      (click)="
+                        isViewPhoto = !isViewPhoto; displayAuthorCover(genre.id)
+                      "
+                    />
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="col-1">
+              <button
+                (click)="isGenreSelected = !isGenreSelected"
+                class="btn btn-danger"
+              >
+                <span>X</span>
+              </button>
             </div>
           </div>
         </div>
@@ -258,7 +310,6 @@
 </div>
 
 <app-random-book-modal
-  *ngIf="selectedRandomBook"
+  *ngIf="isRandoBook"
   [chosenRandomBook]="selectedRandomBook"
-  
 ></app-random-book-modal>

@@ -165,6 +165,7 @@ export class BookPageComponent implements OnInit {
 getRandomBook(): void{
     let randomIndex = Math.floor(Math.random() * this.books.length);
     this.selectedRandomBook = this.books[randomIndex];
+    this.isRandoBook = true;
 }
 
 opendModal(){
