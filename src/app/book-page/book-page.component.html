@@ -193,7 +193,6 @@
                     isViewPhoto = !isViewPhoto; displayAuthorCover(author.id)
                   "
                 />
-
               </div>
             </div>
           </div>
@@ -216,34 +215,34 @@
           <div class="row mb-3" *ngFor="let year of selectedYearArray">
             <div class="col-6 text-end">
               <span
-              ><h4>Title: {{ year.title }}</h4></span
-            >
-            <span
-              ><h4>Author: {{ year.author }}</h4></span
-            >
-            <span
-              ><h4>Year: {{ year.year }}</h4></span
-            >
-            <span
-              ><h4>Genre: {{ year.genre }}</h4></span
-            >
+                ><h4>Title: {{ year.title }}</h4></span
+              >
+              <span
+                ><h4>Author: {{ year.author }}</h4></span
+              >
+              <span
+                ><h4>Year: {{ year.year }}</h4></span
+              >
+              <span
+                ><h4>Genre: {{ year.genre }}</h4></span
+              >
             </div>
             <div class="col-6">
               <div
-              *ngIf="isCoverPresent"
-              class="img-container"
-              style="width: 100px; height: 150px"
-            >
-              <img
-                class="img-fluid"
+                *ngIf="isCoverPresent"
+                class="img-container"
                 style="width: 100px; height: 150px"
-                [src]="year.cover"
-                alt="{{ year.title }} cover"
-                (click)="
-                  isViewPhoto = !isViewPhoto; displayAuthorCover(year.id)
-                "
-              />
-            </div>
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 100px; height: 150px"
+                  [src]="year.cover"
+                  alt="{{ year.title }} cover"
+                  (click)="
+                    isViewPhoto = !isViewPhoto; displayAuthorCover(year.id)
+                  "
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -265,38 +264,37 @@
           <div class="row mb-3" *ngFor="let genre of selectedGenreArray">
             <div class="col-6 text-end">
               <span
-              ><h4>Title: {{ genre.title }}</h4></span
-            >
-            <span
-              ><h4>Author: {{ genre.author }}</h4></span
-            >
-            <span
-              ><h4>Year: {{ genre.year }}</h4></span
-            >
-            <span
-              ><h4>Genre: {{ genre.genre }}</h4></span
-            >
+                ><h4>Title: {{ genre.title }}</h4></span
+              >
+              <span
+                ><h4>Author: {{ genre.author }}</h4></span
+              >
+              <span
+                ><h4>Year: {{ genre.year }}</h4></span
+              >
+              <span
+                ><h4>Genre: {{ genre.genre }}</h4></span
+              >
             </div>
             <div class="col-6">
               <div
-                    *ngIf="isCoverPresent"
-                    class="img-container"
-                    style="width: 100px; height: 150px"
-                  >
-                    <img
-                      class="img-fluid"
-                      style="width: 100px; height: 150px"
-                      [src]="genre.cover"
-                      alt="{{ genre.title }} cover"
-                      (click)="
-                        isViewPhoto = !isViewPhoto; displayAuthorCover(genre.id)
-                      "
-                    />
-                  </div>
+                *ngIf="isCoverPresent"
+                class="img-container"
+                style="width: 100px; height: 150px"
+              >
+                <img
+                  class="img-fluid"
+                  style="width: 100px; height: 150px"
+                  [src]="genre.cover"
+                  alt="{{ genre.title }} cover"
+                  (click)="
+                    isViewPhoto = !isViewPhoto; displayAuthorCover(genre.id)
+                  "
+                />
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -328,5 +326,6 @@
 
 <app-random-book-modal
   *ngIf="isRandoBook"
+  
   [chosenRandomBook]="selectedRandomBook"
 ></app-random-book-modal>

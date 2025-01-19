@@ -6,11 +6,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./random-book-modal.component.css']
 })
 export class RandomBookModalComponent {
-
+  isRandomBook: boolean = true;
   @Input() chosenRandomBook: any; 
-  @Output() close = new EventEmitter<void>();
+  @Output() close = new EventEmitter<boolean>();
 
   onClose(): void {
-    this.close.emit();
+    this.close.emit(false);
   }
 }
