@@ -20,6 +20,7 @@ export class BookPageComponent implements OnInit {
   selectedAuthor: string = '';
   selectedYear: string = '';
   selectedGenre: string = '';
+  searchedAuthor: string = ''
   selectedBook: Book;
   isBookSelected: boolean = false;
   isAuthorSelected: boolean = false;
@@ -107,10 +108,11 @@ export class BookPageComponent implements OnInit {
   }
 
   displayBookDetails(searchString: string) {
+    let upperCaseSearchString = searchString.toUpperCase();
     this.isRandomModalOpen = false;
     let tempArray = [];
     for (let book of this.books) {
-      if (book.title === searchString) {
+      if (book.title.toUpperCase() === upperCaseSearchString) {
         this.selectedBook = book;
         this.isCoverPresent = this.displayCover(book.cover);
         this.isBookSelected = true;
@@ -120,7 +122,7 @@ export class BookPageComponent implements OnInit {
         this.selectedAuthor = "";
         this.selectedGenre = "";
         this.selectedYear = "";
-      } else if (book.author === searchString) {
+      } else if (book.author.toUpperCase() === upperCaseSearchString) {
         tempArray.push(book);
         this.selectedAuthorArray = tempArray;
         this.isAuthorSelected = true;
@@ -142,7 +144,7 @@ export class BookPageComponent implements OnInit {
         this.selectedTitle = "";
         this.selectedGenre = "";
         this.selectedAuthor = "";
-      } else if (book.genre === searchString) {
+      } else if (book.genre.toUpperCase() === upperCaseSearchString) {
         tempArray.push(book);
         this.selectedGenreArray = tempArray;
         this.isGenreSelected = true;
@@ -155,6 +157,14 @@ export class BookPageComponent implements OnInit {
         this.selectedYear = "";
       }
     }
+  }
+
+  clearDropdowns(){
+    this.selectedTitle = '';
+    this.selectedAuthor = '';
+    this.selectedYear = '';
+    this.selectedGenre = '';
+    this.searchedAuthor = '';
   }
 
   displayCover(cover: string): boolean {
@@ -218,6 +228,16 @@ handleCloseModal(){
     });
 
     return event;
+  }
+
+  typingAuthor(searchedAuthor: any){
+    let upperCaseSearchedAuthor = searchedAuthor.toUpperCase();
+    const regExp = /^[a-zA-Z0-9 ]{1,}$/;
+    if(!regExp.test(upperCaseSearchedAuthor)){
+      this.searchedAuthor = '';
+    } else {
+      this.displayBookDetails(upperCaseSearchedAuthor);
+    }
   }
 
 

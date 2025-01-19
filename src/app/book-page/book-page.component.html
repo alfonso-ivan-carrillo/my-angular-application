@@ -93,6 +93,18 @@
             </button>
           </div>
         </div>
+        <div class="row">
+          <div class="col-4">
+            <label>Author: </label><br />
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="searchedAuthor"
+              (keyup)="typingAuthor($event.target.value)"
+              (change)="typingAuthor($event.target.value)"
+             />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -107,7 +119,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="isBookSelected = !isBookSelected"
+                (click)="clearDropdowns(); (isBookSelected = !isBookSelected)"
                 class="btn btn-danger"
               >
                 <span>X</span>
@@ -156,7 +168,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="isAuthorSelected = !isAuthorSelected"
+                (click)="(isAuthorSelected = !isAuthorSelected); clearDropdowns()"
                 class="btn btn-danger"
               >
                 <span>X</span>
@@ -205,7 +217,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="isYearSelected = !isYearSelected"
+                (click)="(isYearSelected = !isYearSelected); clearDropdowns()"
                 class="btn btn-danger"
               >
                 <span>X</span>
@@ -254,7 +266,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="isGenreSelected = !isGenreSelected"
+                (click)="(isGenreSelected = !isGenreSelected); clearDropdowns()"
                 class="btn btn-danger"
               >
                 <span>X</span>
