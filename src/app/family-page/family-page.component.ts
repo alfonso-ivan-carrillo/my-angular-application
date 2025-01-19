@@ -6,9 +6,10 @@ import { PetAPIService } from '../services/petAPI.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-family-page',
-  templateUrl: './family-page.component.html',
-  styleUrls: ['./family-page.component.css']
+    selector: 'app-family-page',
+    templateUrl: './family-page.component.html',
+    styleUrls: ['./family-page.component.css'],
+    standalone: false
 })
 export class FamilyPageComponent {
   isPonchito: boolean = false;

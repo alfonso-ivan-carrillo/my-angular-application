@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-picture-page',
-  templateUrl: './picture-page.component.html',
-  styleUrls: ['./picture-page.component.css'],
+    selector: 'app-picture-page',
+    templateUrl: './picture-page.component.html',
+    styleUrls: ['./picture-page.component.css'],
+    standalone: false
 })
 export class PicturePageComponent {
   constructor(private router: Router) {}

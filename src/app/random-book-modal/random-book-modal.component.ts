@@ -1,16 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-random-book-modal',
-  templateUrl: './random-book-modal.component.html',
-  styleUrls: ['./random-book-modal.component.css']
+    selector: 'app-random-book-modal',
+    templateUrl: './random-book-modal.component.html',
+    styleUrls: ['./random-book-modal.component.css'],
+    standalone: false
 })
 export class RandomBookModalComponent {
   isRandomBook: boolean = true;
   @Input() chosenRandomBook: any; 
-  @Output() close = new EventEmitter<boolean>();
+  @Output() closeModalEvent = new EventEmitter<void>();
 
-  onClose(): void {
-    this.close.emit(false);
+  closeModal(){
+    this.closeModalEvent.emit();
   }
 }

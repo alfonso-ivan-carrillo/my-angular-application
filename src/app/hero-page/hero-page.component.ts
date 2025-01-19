@@ -3,9 +3,10 @@ import { Person } from '../models/Person.model';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-hero-page',
-  templateUrl: './hero-page.component.html',
-  styleUrls: ['./hero-page.component.css']
+    selector: 'app-hero-page',
+    templateUrl: './hero-page.component.html',
+    styleUrls: ['./hero-page.component.css'],
+    standalone: false
 })
 export class HeroPageComponent {
 

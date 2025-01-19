@@ -4,9 +4,10 @@ import { People } from '../models/People.model';
 import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-ponchito',
-  templateUrl: './ponchito.component.html',
-  styleUrls: ['./ponchito.component.css']
+    selector: 'app-ponchito',
+    templateUrl: './ponchito.component.html',
+    styleUrls: ['./ponchito.component.css'],
+    standalone: false
 })
 export class PonchitoComponent implements OnInit{
   myFamily: People[] = [];

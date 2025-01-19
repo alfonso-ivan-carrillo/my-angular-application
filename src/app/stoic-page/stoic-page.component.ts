@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-stoic-page',
-  templateUrl: './stoic-page.component.html',
-  styleUrls: ['./stoic-page.component.css']
+    selector: 'app-stoic-page',
+    templateUrl: './stoic-page.component.html',
+    styleUrls: ['./stoic-page.component.css'],
+    standalone: false
 })
 export class StoicPageComponent {
 

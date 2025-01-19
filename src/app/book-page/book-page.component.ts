@@ -6,9 +6,10 @@ import { RandomBookModalComponent } from '../random-book-modal/random-book-modal
 import { ModalService } from '../services/modal.service';
 
 @Component({
-  selector: 'app-book-page',
-  templateUrl: './book-page.component.html',
-  styleUrls: ['./book-page.component.css']
+    selector: 'app-book-page',
+    templateUrl: './book-page.component.html',
+    styleUrls: ['./book-page.component.css'],
+    standalone: false
 })
 export class BookPageComponent implements OnInit {
   books: Book[] = [];
@@ -27,7 +28,7 @@ export class BookPageComponent implements OnInit {
   isCoverPresent: boolean = false;
   isViewPhoto: boolean = false;
   isCoverBook: boolean = false;
-  isRandoBook: boolean = false;
+  isRandomModalOpen: boolean = false;
   selectedRandomBook: Book;
   selectedGenreArray: Book[] = [];
   selectedYearArray: Book[] = [];
@@ -106,6 +107,7 @@ export class BookPageComponent implements OnInit {
   }
 
   displayBookDetails(searchString: string) {
+    this.isRandomModalOpen = false;
     let tempArray = [];
     for (let book of this.books) {
       if (book.title === searchString) {
@@ -166,14 +168,18 @@ export class BookPageComponent implements OnInit {
 getRandomBook(): void{
     let randomIndex = Math.floor(Math.random() * this.books.length);
     this.selectedRandomBook = this.books[randomIndex];
-    this.isRandoBook = true;
+    this.isRandomModalOpen = true;
+    this.isViewPhoto = false;
+    this.isBookSelected = false;
+    this.isAuthorSelected = false;
+    this.isYearSelected = false;
+    this.isGenreSelected = false;
+
 }
 
-opendModal(){
-    this.modalService.openModal();
+handleCloseModal(){
+  this.isRandomModalOpen = false;
 }
-
-
 
   changePdfName(event: Event): any {
     const target = event.target as HTMLInputElement;

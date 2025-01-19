@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-fizz-buzz',
-  templateUrl: './fizz-buzz.component.html',
-  styleUrls: ['./fizz-buzz.component.css']
+    selector: 'app-fizz-buzz',
+    templateUrl: './fizz-buzz.component.html',
+    styleUrls: ['./fizz-buzz.component.css'],
+    standalone: false
 })
 export class FizzBuzzComponent {
 
