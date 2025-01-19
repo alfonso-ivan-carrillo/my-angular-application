@@ -113,6 +113,7 @@ export class BookPageComponent implements OnInit {
         this.isCoverPresent = this.displayCover(book.cover);
         this.isBookSelected = true;
         this.isAuthorSelected = false;
+        this.isYearSelected = false;
         this.isGenreSelected = false;
         this.selectedAuthor = "";
         this.selectedGenre = "";
