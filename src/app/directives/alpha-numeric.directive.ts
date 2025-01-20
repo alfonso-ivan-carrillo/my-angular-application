@@ -20,10 +20,10 @@ export class AlphaNumeric {
 
   private validateInput(event: KeyboardEvent | ClipboardEvent) {
     const input = this.el.nativeElement.value;
-    const regex = /^[a-zA-Z0-9\s]*$/;
+    const regex = /^[a-zA-Z0-9 ]{1,}$/;
 
     if (
-      (event instanceof KeyboardEvent &&
+      (event instanceof KeyboardEvent && event.keyCode !== 8 &&
         !regex.test(String.fromCharCode(event.keyCode))) ||
       (event instanceof ClipboardEvent &&
         !regex.test(input + this.getPastedText(event)))
@@ -38,7 +38,7 @@ export class AlphaNumeric {
 
   private handlePaste(event: ClipboardEvent) {
     const pastedText = event.clipboardData.getData('text');
-    const regex = /^[a-zA-Z0-9\s]*$/;
+    const regex = /^[a-zA-Z0-9 ]{1,}$/;
     const newValue = this.el.nativeElement.value + pastedText;
 
     if (!regex.test(newValue)) {

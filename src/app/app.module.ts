@@ -17,6 +17,7 @@ import { PicturePageComponent } from './picture-page/picture-page.component';
 import { StoicPageComponent } from './stoic-page/stoic-page.component';
 import { RandomBookModalComponent } from './random-book-modal/random-book-modal.component';
 import { AlphaNumeric } from './directives/alpha-numeric.directive';
+import { UppercaseOnly } from './directives/uppercase-only.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AlphaNumeric } from './directives/alpha-numeric.directive';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    AlphaNumeric
+    AlphaNumeric,
+    UppercaseOnly
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -233,6 +233,7 @@ handleCloseModal(){
   }
 
   typingAuthor(searchedAuthor: any){
+    console.log(searchedAuthor);
     let upperCaseSearchedAuthor = searchedAuthor.toUpperCase();
     const regExp = /^[a-zA-Z0-9 ]{1,}$/;
     if(!regExp.test(upperCaseSearchedAuthor)){
