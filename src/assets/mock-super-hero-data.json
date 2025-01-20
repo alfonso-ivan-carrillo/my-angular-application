@@ -1,0 +1,213 @@
+{
+    "hero": [
+        {
+            "id": 1,
+            "name": "Superman",
+            "age": 30,
+            "power": "Super strength",
+            "group": "Justice League"
+        },
+        {
+            "id": 2,
+            "name": "Batman",
+            "age": 35,
+            "power": "Intelligence",
+            "group": "Justice League"
+        },
+        {
+            "id": 3,
+            "name": "Wonder Woman",
+            "age": 28,
+            "power": "Superhuman strength and agility",
+            "group": "Justice League"
+        },
+        {
+            "id": 4,
+            "name": "The Flash",
+            "age": 25,
+            "power": "Super speed",
+            "group": "Justice League"
+        },
+        {
+            "id": 5,
+            "name": "Green Lantern",
+            "age": 32,
+            "power": "Ring of power",
+            "group": "Justice League"
+        },
+        {
+            "id": 6,
+            "name": "Aquaman",
+            "age": 33,
+            "power": "Control over water",
+            "group": "Justice League"
+        },
+        {
+            "id": 7,
+            "name": "Cyborg",
+            "age": 31,
+            "power": "Cybernetic enhancements",
+            "group": "Justice League"
+        },
+        {
+            "id": 8,
+            "name": "Martian Manhunter",
+            "age": 29,
+            "power": "Shape-shifting",
+            "group": "Justice League"
+        },
+        {
+            "id": 9,
+            "name": "Green Arrow",
+            "age": 34,
+            "power": "Archery skills",
+            "group": "Justice League"
+        },
+        {
+            "id": 10,
+            "name": "Hawkman",
+            "age": 27,
+            "power": "Flight and super strength",
+            "group": "Justice League"
+        },
+        {
+            "id": 11, 
+            "name": "Wolverine",
+            "age": 140,
+            "power": "Regineration",
+            "group": "X-Men"
+        },
+        {
+            "id": 12,
+            "name": "Storm",
+            "age": 28,
+            "power": "Weather manipulation",
+            "group": "X-Men"
+        },
+        {
+            "id": 13,
+            "name": "Beast",
+            "age": 35,
+            "power": "Enhanced strength and agility",
+            "group": "X-Men"
+        },
+        {
+            "id": 14,
+            "name": "Nightcrawler",
+            "age": 23,
+            "power": "Teleportation and telekinesis",
+            "group": "X-Men"
+        },
+        {
+            "id": 15,
+            "name": "Colossus",
+            "age": 26,
+            "power": "Organic steel skin",
+            "group": "X-Men"
+        },
+        {
+            "id": 16,
+            "name": "Rogue",
+            "age": 22,
+            "power": "Energy absorption and manipulation",
+            "group": "X-Men"
+        },
+        {
+            "id": 17,
+            "name": "Gambit",
+            "age": 24,
+            "power": "Chance manipulation",
+            "group": "X-Men"
+        },
+        {
+            "id": 18,
+            "name": "Psylocke",
+            "age": 25,
+            "power": "Mind control",
+            "group": "X-Men"
+        },
+        {
+            "id": 19,
+            "name": "Jubilee",
+            "age": 21,
+            "power": "Healing factor",
+            "group": "X-Men"
+        },
+        {
+            "id": 20,
+            "name": "Iceman",
+            "age": 27,
+            "power": "Cryokinesis",
+            "group": "X-Men"
+        },
+        {
+            "id": 21,
+            "name": "Captain America",
+            "age": 28,
+            "power": "Superhuman strength and agility",
+            "group": "Avengers"
+        },
+        {
+            "id": 22,
+            "name": "Iron Man",
+            "age": 28,
+            "power": "Superhuman Intelligence",
+            "group": "Avengers"
+        },
+        {
+            "id": 23,
+            "name": "Thor",
+            "age": 28,
+            "power": "God",
+            "group": "Avengers"
+        },
+        {
+            "id": 24,
+            "name": "Hulk",
+            "age": 28,
+            "power": "Superhuman strength, Indestructibility, and durability",
+            "group": "Avengers"
+        },
+        {
+            "id": 25,
+            "name": "Black Widow",
+            "age": 28,
+            "power": "Super Spy",
+            "group": "Avengers"
+        },
+        {
+            "id": 26,
+            "name": "Deadshot",
+            "age": 28,
+            "power": "Marksmanship",
+            "group": "Suicide Squad"
+        },
+        {
+            "id": 27,
+            "name": "Harley Quinn",
+            "age": 22,
+            "power": "Insane, strength and agility",
+            "group": "Suicide Squad"
+        },
+        {
+            "id": 28,
+            "name": "Peacemaker",
+            "age": 30,
+            "power": "Peacekeeping",
+            "group": "Suicide Squad"
+        },{
+            "id": 29,
+            "name": "Deadpool",
+            "age": 32,
+            "power": "Regenerative healing factor, superhuman strength, agility, and reflexes, and a healing factor that can regenerate damaged or destroyed body parts",
+            "group": "Independent"
+        },
+        {
+            "id": 30,
+            "name": "Blade",
+            "age": 30,
+            "power": "Daywalker, superhuman strength, agility, reflexes, and durability",
+            "group": "Independent"
+        }
+    ]
+}

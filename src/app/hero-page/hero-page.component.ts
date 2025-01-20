@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Person } from '../models/Person.model';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./hero-page.component.css'],
     standalone: false
 })
-export class HeroPageComponent {
+export class HeroPageComponent implements OnInit{
 
   theBandNames: Person[] = [
       { name: 'Golden Gabe', age: 40, skill: 'Sword' },
@@ -26,12 +26,15 @@ export class HeroPageComponent {
     isTransformed: boolean = false;
     ageArray: any[] = [];  
 
+
     constructor(
       private router: Router,
     ){}
 
     ngOnInit(){
+    
     }
+
 
     routePage(page: string){
       this.router.navigate([page]).then(() => {
@@ -46,9 +49,7 @@ export class HeroPageComponent {
       for (let i = 0; i < columnArray.length; i += this.numPerColumns) {
         const chunk = columnArray.slice(i, i + this.numPerColumns);
         this.chunkedArray.push(chunk);
-        console.log(this.chunkedArray);
         this.isTransformed = false;
-        console.log(this.isTransformed);  
       }
     }
 
@@ -64,7 +65,6 @@ export class HeroPageComponent {
       );
       this.chunkingArray(newArray);
       this.isTransformed = true;
-      console.log(this.isTransformed);
     }
   
     filterAging(columnArray: Person[]) {
