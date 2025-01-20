@@ -85,24 +85,31 @@
             </select>
           </div>
           <div class="col-2 mt-2">
-            <button
-              class="btn btn-primary"
-              (click)="getRandomBook()"
-            >
+            <button class="btn btn-primary" (click)="getRandomBook()">
               Random Book
             </button>
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-4">
           <div class="col-4">
-            <label>Author: </label><br />
+            <label><strong>ManualSearch:</strong></label
+            ><br />
             <input
               type="text"
               class="form-control"
               [(ngModel)]="searchedAuthor"
               (keyup)="typingAuthor($event.target.value)"
               (change)="typingAuthor($event.target.value)"
-             />
+            />
+          </div>
+          <div class="col-4">
+            <label><strong>Directive Search:</strong></label><br />
+            <input 
+              alpha-numeric
+              type="text" 
+              class="form-control"
+              [(ngModel)]="directiveSearch"
+            />
           </div>
         </div>
       </div>
@@ -119,7 +126,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="clearDropdowns(); (isBookSelected = !isBookSelected)"
+                (click)="clearDropdowns(); isBookSelected = !isBookSelected"
                 class="btn btn-danger"
               >
                 <span>X</span>
@@ -168,7 +175,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="(isAuthorSelected = !isAuthorSelected); clearDropdowns()"
+                (click)="isAuthorSelected = !isAuthorSelected; clearDropdowns()"
                 class="btn btn-danger"
               >
                 <span>X</span>
@@ -217,7 +224,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="(isYearSelected = !isYearSelected); clearDropdowns()"
+                (click)="isYearSelected = !isYearSelected; clearDropdowns()"
                 class="btn btn-danger"
               >
                 <span>X</span>
@@ -266,7 +273,7 @@
             </div>
             <div class="col-5 text-end">
               <button
-                (click)="(isGenreSelected = !isGenreSelected); clearDropdowns()"
+                (click)="isGenreSelected = !isGenreSelected; clearDropdowns()"
                 class="btn btn-danger"
               >
                 <span>X</span>

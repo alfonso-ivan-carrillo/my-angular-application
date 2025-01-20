@@ -16,6 +16,7 @@ import { FamilyPageComponent } from './family-page/family-page.component';
 import { PicturePageComponent } from './picture-page/picture-page.component';
 import { StoicPageComponent } from './stoic-page/stoic-page.component';
 import { RandomBookModalComponent } from './random-book-modal/random-book-modal.component';
+import { AlphaNumeric } from './directives/alpha-numeric.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RandomBookModalComponent } from './random-book-modal/random-book-modal.
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
+    AlphaNumeric
   ],
   providers: [],
   bootstrap: [AppComponent]

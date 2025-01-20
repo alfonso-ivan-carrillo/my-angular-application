@@ -20,7 +20,8 @@ export class BookPageComponent implements OnInit {
   selectedAuthor: string = '';
   selectedYear: string = '';
   selectedGenre: string = '';
-  searchedAuthor: string = ''
+  searchedAuthor: string = '';
+  directiveSearch: string = '';
   selectedBook: Book;
   isBookSelected: boolean = false;
   isAuthorSelected: boolean = false;
