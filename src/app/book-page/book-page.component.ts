@@ -5,6 +5,7 @@ import { BookAPIService } from '../services/bookAPI.service';
 import { RandomBookModalComponent } from '../random-book-modal/random-book-modal.component';
 import { ModalService } from '../services/modal.service';
 
+
 @Component({
     selector: 'app-book-page',
     templateUrl: './book-page.component.html',
@@ -166,6 +167,7 @@ export class BookPageComponent implements OnInit {
     this.selectedYear = '';
     this.selectedGenre = '';
     this.searchedAuthor = '';
+    this.directiveSearch = '';
   }
 
   displayCover(cover: string): boolean {
@@ -185,7 +187,6 @@ getRandomBook(): void{
     this.isAuthorSelected = false;
     this.isYearSelected = false;
     this.isGenreSelected = false;
-
 }
 
 handleCloseModal(){

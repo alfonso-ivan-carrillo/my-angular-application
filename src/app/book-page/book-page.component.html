@@ -109,6 +109,8 @@
               type="text" 
               class="form-control"
               [(ngModel)]="directiveSearch"
+              (keyup)="typingAuthor($event.target.value)"
+              (change)="typingAuthor($event.target.value)"
             />
           </div>
         </div>
