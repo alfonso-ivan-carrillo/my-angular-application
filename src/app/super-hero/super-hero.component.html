@@ -4,16 +4,28 @@
       <div class="row">
         <div class="col-4"></div>
         <div class="col-4 text-center">
-          <h2><strong>Super Heroes</strong></h2>
+          <h2><strong>Super Heroes Page</strong></h2>
         </div>
         <div class="col-4 text-end">
             <button class="btn btn-primary" (click)="routePage('/')">Back to Home</button>
         </div>
       </div>
+      <div class="row text-start">
+            <div class="col-10 search-bar">
+                <div class="row m-1">
+                    <h3>Search Bar</h3>
+                </div>
+            </div>
+      </div>
       <div class="row">
-        <div class="card-body">
-
-        </div>
+        <div class="col-3">
+            <select class="col-10" [(ngModel)]="supersName">
+              <option value="">Select Name</option>
+              <option *ngFor="let n of superHeroes" [value]="n.name">
+                {{ n.name }}
+              </option>
+            </select>
+          </div>
       </div>
     </div>
   </div>

@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class SuperHeroComponent implements OnInit {
 
   superHeroes: Superhero[] = [];
+  supersName: string = '';
+  newNames: Superhero[] = [];
 
 
   constructor(
@@ -22,8 +24,13 @@ export class SuperHeroComponent implements OnInit {
 ngOnInit(): void {
     this.superheroAPI.getSuperheroes().subscribe((data) => {
       this.superHeroes = data;
-      console.log(this.superHeroes);
-    })
+      console.log(this.superHeroes)
+      this.superHeroes.forEach(superHero => {
+        console.log(superHero);
+      });
+    });
+
+ 
 }
 
 routePage(page: string){
@@ -35,6 +42,12 @@ routePage(page: string){
 }
 
 
-
+displayArray(){
+  let tempArray;
+  this.superHeroes.forEach((superhero) => {
+    tempArray.push(superhero.name)
+  })
+  console.log(tempArray)
+}
 
 }

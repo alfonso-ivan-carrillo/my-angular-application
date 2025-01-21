@@ -13,6 +13,6 @@ export class SuperheroAPIService {
     constructor(private http: HttpClient){}
 
     getSuperheroes(): Observable<Superhero[]> {
-        return this.http.get<Superhero>(this.dataUrl).pipe(map(data => Object.values(data)))
+        return this.http.get<Superhero[]>(this.dataUrl).pipe(map(data => Object.values(data)));
     }
 }
