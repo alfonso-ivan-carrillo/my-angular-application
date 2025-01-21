@@ -18,6 +18,7 @@ import { StoicPageComponent } from './stoic-page/stoic-page.component';
 import { RandomBookModalComponent } from './random-book-modal/random-book-modal.component';
 import { AlphaNumeric } from './directives/alpha-numeric.directive';
 import { UppercaseOnly } from './directives/uppercase-only.directive';
+import { SuperHeroComponent } from './super-hero/super-hero.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { UppercaseOnly } from './directives/uppercase-only.directive';
     PicturePageComponent,
     StoicPageComponent,
     RandomBookModalComponent,
+    SuperHeroComponent
   ],
   imports: [
     BrowserModule,

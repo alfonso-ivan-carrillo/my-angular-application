@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../models/Person.model';
 import { Router } from '@angular/router';
+import { SuperheroAPIService } from '../services/superheroAPI.service';
 
 @Component({
     selector: 'app-hero-page',
@@ -25,14 +26,19 @@ export class HeroPageComponent implements OnInit{
     chunkedArray: any[][] = [];
     isTransformed: boolean = false;
     ageArray: any[] = [];  
+    superheroes: any[] = [];
 
 
     constructor(
       private router: Router,
+      private superheroAPI: SuperheroAPIService
     ){}
 
     ngOnInit(){
-    
+      this.superheroAPI.getSuperheroes().subscribe((data) => {
+        this.superheroes = data;
+        console.log(this.superheroes);
+      })
     }
 
 
