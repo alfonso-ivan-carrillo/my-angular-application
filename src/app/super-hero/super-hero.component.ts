@@ -20,6 +20,8 @@ export class SuperHeroComponent implements OnInit {
   isSelectedSuperhero: boolean = false;
   selectedOriginArray: Superhero[] = [];
   isSelectedOrigin: boolean = false;
+  selectedTeamArray: Superhero[] = [];
+  isSelectedTeam: boolean = false;
   heroName: string;
   heroOrigin: string;
   heroPower: string;
@@ -94,14 +96,31 @@ displayHero(searchString: string){
     if(superhero.name === searchString){
       this.selectedSuperhero = superhero;
       this.isSelectedSuperhero = true;
-      console.log(this.selectedSuperhero.name);
-      console.log(typeof this.selectedSuperhero)
+      this.isSelectedOrigin = false;
+      this.isSelectedTeam = false;
     } else if (superhero.origin === searchString){
       tempArray.push(superhero);
       this.selectedOriginArray = tempArray;
       this.isSelectedOrigin = true;
+      this.isSelectedSuperhero = false;
+      this.isSelectedTeam = false;
+    } else if (superhero.team === searchString){
+      tempArray.push(superhero);
+      this.selectedTeamArray = tempArray;
+      this.isSelectedTeam = true;
+      this.isSelectedSuperhero = false;
+      this.isSelectedOrigin = false;
     }
   }
+}
+
+closeClear(){
+  this.isSelectedSuperhero = false;
+  this.isSelectedOrigin = false;  
+  this.isSelectedTeam = false;
+  this.selectedSuperhero = null;
+  this.selectedOriginArray = [];
+  this.selectedTeamArray = [];
 }
 
 
