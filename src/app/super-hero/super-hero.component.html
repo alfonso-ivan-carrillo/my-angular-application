@@ -7,26 +7,88 @@
           <h2><strong>Super Heroes Page</strong></h2>
         </div>
         <div class="col-4 text-end">
-            <button class="btn btn-primary" (click)="routePage('/')">Back to Home</button>
+          <button class="btn btn-primary" (click)="routePage('/')">
+            Back to Home
+          </button>
         </div>
       </div>
-      <div class="row text-start">
-            <div class="col-10 search-bar">
-                <div class="row m-1">
-                    <h3>Search Bar</h3>
-                </div>
-            </div>
-      </div>
-      <div class="row">
-        <div class="col-3">
-            <select class="col-10" [(ngModel)]="supersName">
-              <option value="">Select Name</option>
-              <option *ngFor="let n of superHeroes" [value]="n.name">
-                {{ n.name }}
+
+      <div class="container search-bar">
+        <div class="row mt-3">
+          <div class="col-12 mt-3">
+            <h4>Search Bar:</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label>Superhero Name:</label><br />
+            <select [(ngModel)]="heroName" (change)="displayHero(heroName)">
+              <option value="">Superhero Name</option>
+              <option *ngFor="let name of superNames" [value]="">
+                {{ name }}
               </option>
             </select>
           </div>
+          <div class="col-4">
+            <label>Superhero Origin:</label><br />
+            <select [(ngModel)]="heroOrigin" (change)="displayHero(heroOrigin)">
+              <option value="">Superhero Age</option>
+              <option *ngFor="let sup of superOrigin" [value]="sup">
+                {{ sup }}
+              </option>
+            </select>
+          </div>
+          <div class="col-4">
+            <label>Superhero Team:</label><br />
+            <select [(ngModel)]="heroTeam">
+              <option value="">SuperheroTeam</option>
+              <option *ngFor="let team of superTeams" [value]="team">
+                {{ team }}
+              </option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="row mt-5 text-center" *ngIf="isSelectedSuperhero">
+    <div class="col-6 text-center">
+      <h4>SuperHero Details:</h4>
+  
+      <span><strong>Superhero Name: {{ selectedSuperhero?.name }} </strong></span><br/>
+      <span><strong> Superhero Origin: {{ selectedSuperhero?.origin }}</strong></span><br/>
+      <span><strong> Superhero Team: {{ selectedSuperhero?.team }}</strong></span><br/>
+      <span> <strong>Superhero Power: {{ selectedSuperhero?.power }}</strong></span><br/>
+
+    </div>
+    <div class="col-1">
+      <button class="btn btn-primary" 
+       (click)="isSelectedSuperhero = !isSelectedSuperhero; selectedSuperhero = '' ">X</button>
+    </div>
+  </div>
+  <div class="row mt-3 text-center" *ngIf="isSelectedOrigin">
+      <h4>Superhero Origin Details:</h4>
+      <div class="col-6 text-center mb-2" *ngFor="let origin of selectedOriginArray">
+      <span><strong>Superhero Name: {{ origin?.name }} </strong></span><br/>
+      <span><strong> Superhero Origin: {{ origin?.origin }}</strong></span><br/>
+      <span><strong> Superhero Team: {{ origin?.team }}</strong></span><br/>
+      <span> <strong>Superhero Power: {{ origin?.power }}</strong></span><br/>
+      <hr>
+    </div>
+  </div>
 </div>
+
+<!-- <div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <div>
+        <button
+          (click)="updateMethod({ color: newColor, owner: newOwner })"
+          class="btn btn-primary"
+        >
+          update
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

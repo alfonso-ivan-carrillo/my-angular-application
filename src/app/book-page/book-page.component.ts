@@ -53,7 +53,6 @@ export class BookPageComponent implements OnInit {
   ngOnInit(): void {
     this.bookService.getBooks().subscribe((data) => {
       this.books = data;
-      console.log(this.books);
       this.removeAuthorDupes(this.books);
       this.removeGenreDupes(this.books);
       this.removeYearDupes(this.books);

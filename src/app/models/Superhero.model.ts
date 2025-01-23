@@ -1,7 +1,7 @@
 export interface Superhero {
     id: number;
     name: string;
-    age: number;
+    origin: string;
     power: string;
-    group: string;
+    team: string;
 }
