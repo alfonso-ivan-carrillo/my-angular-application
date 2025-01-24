@@ -28,6 +28,16 @@ export class SuperHeroComponent implements OnInit {
   heroTeam: string;
   newNames: Superhero[] = [];
 
+  newHero: Superhero;
+  newName: string;
+  newOrigin: string;
+  newTeam: string;
+  newPower: string;
+  isNewName: boolean = false;
+  isNewOrigin: boolean = false;
+  isnewTeam: boolean = false;
+  isNewPower: boolean = false;
+
   constructor(
     private superheroAPI: SuperheroAPIService,
     private router: Router
@@ -121,6 +131,20 @@ closeClear(){
   this.selectedSuperhero = null;
   this.selectedOriginArray = [];
   this.selectedTeamArray = [];
+  this.heroName = "";
+  this.heroOrigin= "";
+  this.heroTeam = "";
+}
+
+buildSuperhero(){
+  let buildHero = {
+    id: this.superHeroes.length + 1,
+    name: this.newName,
+    origin: this.newOrigin,
+    team: this.newTeam,
+    power: this.newPower
+  }
+  this.newHero = buildHero;
 }
 
 

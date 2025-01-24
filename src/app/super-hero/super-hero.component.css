@@ -3,6 +3,15 @@
     width: 1000px;
     height: 150px;
     border-radius: 25px;
-    background-color: palegoldenrod;
+    background-color: lightblue;
+    border: 2px solid black;
+}
+
+.search-bar2 {
+    margin-top: 20px;
+    width: 1000px;
+    height: 250px;
+    border-radius: 25px;
+    background-color: rgb(192, 179, 246);
     border: 2px solid black;
 }

@@ -52,6 +52,78 @@
     </div>
   </div>
 
+  <div class="container search-bar2">
+    <div class="row mt-2">
+      <h4>Build a Superhero:</h4>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label>Superhero Name:</label><br />
+        <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="newName"
+        (keypress)="newName"
+        (keyup)="newName"
+        />
+      </div>
+      <div class="col-3">
+        <label>Superhero Team:</label><br />
+        <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="newTeam"
+        (keypress)="newTeam"
+        (keyup)="newTeam"
+        />
+      </div>
+      <div class="col-3">
+        <label>Superhero Origin:</label><br />
+        <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="newOrigin"
+        (keypress)="newOrigin"
+        (keyup)="newOrigin"
+        />
+      </div>
+      <div class="col-3">
+        <label>Superhero Power:</label><br />
+        <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="newPower"
+        (keypress)="newPower"
+        (keyup)="newPower"
+        />
+      </div>
+    </div>
+    <div class="row text-center mt-2"><h3>New Superhero</h3></div>
+    <div class="row mt-3 text-center">
+        <div class="col-2"></div>
+        <div class="col-4 text-start">
+          <span><strong>Name: {{ newName }} </strong></span>
+        </div>
+      
+        <div class="col-2 text-start">
+          <span><strong>Team: {{ newTeam }} </strong></span>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row mt-3 text-start">
+      <div class="col-2"></div>
+        <div class="col-4">
+          <span><strong>Origin: {{ newOrigin }} </strong></span>
+        </div>
+
+        <div class="col-4">
+          <span><strong>Power: {{ newPower }} </strong></span>
+        </div>
+        <div class="col-2"></div>
+
+    </div>
+  </div>
+
   <div class="row m-3 text-center" *ngIf="isSelectedSuperhero">
     <div class="col-3"></div>
     <div class="col-6 text-center">
@@ -112,17 +184,3 @@
   </div>
 </div>
 
-<!-- <div class="container mt-5">
-  <div class="row">
-    <div class="col-4">
-      <div>
-        <button
-          (click)="updateMethod({ color: newColor, owner: newOwner })"
-          class="btn btn-primary"
-        >
-          update
-        </button>
-      </div>
-    </div>
-  </div>
-</div> -->
