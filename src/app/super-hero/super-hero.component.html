@@ -98,21 +98,35 @@
         />
       </div>
     </div>
-    <div class="row text-center mt-2"><h3>New Superhero</h3></div>
+    <div class="row text-center mt-2">
+      <div class="col-4 text-start mt-1">
+        <button 
+          class="btn btn-primary"
+          (click)="buildSuperhero()"
+        >
+          Build Superhero
+        </button>
+      </div>
+      <div class="col-4">
+        <h3>New Superhero</h3>
+      </div> 
+      <div class="col-4"></div> 
+    </div>
     <div class="row mt-3 text-center">
-        <div class="col-2"></div>
-        <div class="col-4 text-start">
+        <div class="col-3">
+        </div>
+        <div class="col-3 text-start">
           <span><strong>Name: {{ newName }} </strong></span>
         </div>
       
-        <div class="col-2 text-start">
+        <div class="col-3 text-start">
           <span><strong>Team: {{ newTeam }} </strong></span>
         </div>
-        <div class="col-2"></div>
+        <div class="col-3"></div>
     </div>
     <div class="row mt-3 text-start">
-      <div class="col-2"></div>
-        <div class="col-4">
+      <div class="col-3"></div>
+        <div class="col-3">
           <span><strong>Origin: {{ newOrigin }} </strong></span>
         </div>
 
@@ -123,6 +137,7 @@
 
     </div>
   </div>
+
 
   <div class="row m-3 text-center" *ngIf="isSelectedSuperhero">
     <div class="col-3"></div>

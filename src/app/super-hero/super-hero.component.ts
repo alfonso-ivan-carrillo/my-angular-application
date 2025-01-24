@@ -145,6 +145,7 @@ buildSuperhero(){
     power: this.newPower
   }
   this.newHero = buildHero;
+  console.log(this.newHero);
 }
 
 
