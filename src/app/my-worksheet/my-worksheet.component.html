@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-10 text-center">
+                <h1>WorkSheet</h1>
+            </div>
+            <div class="col-2 text-end">
+                <button class="btn btn-primary"
+                    (click)="routeToPage('/')"
+                    >
+                    Back Home</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-3 text-center">
+            <label>Date Picker:</label><br />
+            <input 
+                type="date"
+                class="form-control"
+                [(ngModel)]="testDate"
+                (change)="displayDate(testDate.toString())"
+            />
+        </div>
+    </div>
+</div>
+

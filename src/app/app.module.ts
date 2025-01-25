@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BookPageComponent } from './book-page/book-page.component';
-import { FizzBuzzComponent } from './fizz-buzz/fizz-buzz.component';
+import { MyWorksheetComponent } from './my-worksheet/my-worksheet.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PonchitoComponent } from './ponchito/ponchito.component';
 import { PonchoComponent } from './poncho/poncho.component';
@@ -24,7 +24,7 @@ import { SuperHeroComponent } from './super-hero/super-hero.component';
   declarations: [
     AppComponent,
     BookPageComponent,
-    FizzBuzzComponent,
+    MyWorksheetComponent,
     HomepageComponent,
     PonchitoComponent,
     PonchoComponent,

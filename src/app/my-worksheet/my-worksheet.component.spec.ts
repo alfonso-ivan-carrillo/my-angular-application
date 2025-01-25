@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FizzBuzzComponent } from './fizz-buzz.component';
+import { MyWorksheetComponent } from './my-worksheet.component';
 
 describe('FizzBuzzComponent', () => {
-  let component: FizzBuzzComponent;
-  let fixture: ComponentFixture<FizzBuzzComponent>;
+  let component: MyWorksheetComponent;
+  let fixture: ComponentFixture<MyWorksheetComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FizzBuzzComponent ]
+      declarations: [ MyWorksheetComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FizzBuzzComponent);
+    fixture = TestBed.createComponent(MyWorksheetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
