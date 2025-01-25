@@ -33,6 +33,7 @@ export class SuperHeroComponent implements OnInit {
   newOrigin: string;
   newTeam: string;
   newPower: string;
+  isNewSuper: boolean = false;
   isNewName: boolean = false;
   isNewOrigin: boolean = false;
   isnewTeam: boolean = false;
@@ -137,6 +138,7 @@ closeClear(){
 }
 
 buildSuperhero(){
+  
   let buildHero = {
     id: this.superHeroes.length + 1,
     name: this.newName,
@@ -144,6 +146,7 @@ buildSuperhero(){
     team: this.newTeam,
     power: this.newPower
   }
+  this.isNewSuper = true;
   this.newHero = buildHero;
   console.log(this.newHero);
 }

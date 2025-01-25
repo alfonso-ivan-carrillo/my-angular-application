@@ -134,7 +134,24 @@
           <span><strong>Power: {{ newPower }} </strong></span>
         </div>
         <div class="col-2"></div>
+    </div>
+  </div>
 
+  <div class="card" *ngIf="isNewSuper">
+    <div class="card-body">
+      <div class="row text-center">
+        <div class="col">
+          <h4>Super Hero Details</h4>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <span><strong>Name: {{ newHero.name }}</strong></span><br />
+          <span><strong>Origin: {{ newHero.origin }}</strong></span><br />
+          <span><strong>Team: {{ newHero.team }}</strong></span><br />
+          <span><strong>Power: {{ newHero.power }}</strong></span><br />
+        </div>
+      </div>
     </div>
   </div>
 
