@@ -23,7 +23,7 @@
                 type="date"
                 class="form-control"
                 [(ngModel)]="testDate"
-                (change)="displayDate(testDate.toString())"
+                (change)="displayDate(testDate.toString()); displayTimeDate(testDate.toString())"
             />
         </div>
     </div>

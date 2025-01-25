@@ -29,4 +29,16 @@ export class MyWorksheetComponent {
    console.log(utcDate)
   }
 
+  displayTimeDate(dateString: string){
+    const epochDate = new Date(0);
+
+    const targetDate = new Date(dateString);
+
+    const timeDifferenceMilliseconds = targetDate.getTime() - epochDate.getTime();
+
+    console.log(`Time difference in milliseconds: ${timeDifferenceMilliseconds} `);
+    let newDate = new Date(timeDifferenceMilliseconds)
+    console.log(newDate);
+  }
+
 }
