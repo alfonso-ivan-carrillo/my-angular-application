@@ -77,13 +77,27 @@ export class MyWorksheetComponent {
     }else {
       alert('Number not found.');
     }
-    // for(const num of numArray){
-    //   if(num == skipNumber){
-    //     this.nextNumber = num + 1;
-    //     console.log(this.nextNumber);
-    //   } else {
-    //     console.log('Number not found');
-    //   }
-    // }
   }
+
+extractVowels(inputString: string): string {
+  let vowels = ['a', 'e', 'i', 'o', 'u' ];
+  let newWord = '';
+
+  // for(let i = 0; i < inputString.length; i++){
+  //   const char = inputString[i].toLowerCase();
+  //   if(!vowels.includes(char)){
+  //     newWord += char;
+  //   }
+  // }
+  inputString.toLowerCase();
+  for(let i = 0; i < inputString.length; i++){
+    if(!vowels.includes(inputString[i])){
+      newWord += inputString[i];
+    }
+  }
+
+  console.log(newWord);
+ return newWord;
+}
+
 }
