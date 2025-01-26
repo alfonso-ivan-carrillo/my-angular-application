@@ -1,31 +1,58 @@
 <div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-10 text-center">
-                <h1>WorkSheet</h1>
-            </div>
-            <div class="col-2 text-end">
-                <button class="btn btn-primary"
-                    (click)="routeToPage('/')"
-                    >
-                    Back Home</button>
-            </div>
-        </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-10 text-center">
+        <h1>WorkSheet</h1>
+      </div>
+      <div class="col-2 text-end">
+        <button class="btn btn-primary" (click)="routeToPage('/')">
+          Back Home
+        </button>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="card">
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-3 text-center">
-            <label>Date Picker:</label><br />
-            <input 
-                type="Date"
-                class="form-control"
-                [(ngModel)]="testDate"
-                (change)="getUTCDate(testDate)"
-            />
-        </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-3 text-center mb-3">
+      <label>Date Picker:</label><br />
+      <input
+        type="Date"
+        class="form-control"
+        [(ngModel)]="testDate"
+        (change)="getUTCDate(testDate)"
+      />
     </div>
+  </div>
 </div>
 
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6 text-start">
+        <label>Enter a Number from 1 through 10:</label><br />
+        <div class="col-4 mb-2">
+          <input 
+            type="number" 
+            class="form-control" 
+            [(ngModel)]="skipNumber" 
+          />
+        </div>
+        <button class="btn btn-primary me-4"
+            (click)="skipThisNumber(skipNumber)"
+        >Click to Skip</button>
+        <button 
+        class="btn btn-warning" 
+        (click)="skipNumber = 0; nextNumber = 0"
+        >Reset Number</button>
+         <br />
+        <span class="col-6">
+            <span>Next Number: {{ nextNumber }} </span>
+        </span>
+      </div>
+      
+    </div>
+  </div>
+</div>

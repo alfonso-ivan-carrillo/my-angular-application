@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 export class MyWorksheetComponent {
   testDate: string = new Date().toISOString().split('T')[0];
 
+  skipNumber: number;
+  nextNumber: number;
+
   constructor(private router: Router) {}
 
   routeToPage(page: string) {
@@ -57,8 +60,30 @@ export class MyWorksheetComponent {
     console.log(utcDate);
   }
 
+  skipThisNumber(skipNumber: any) {
+    const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+    if (typeof skipNumber != 'number') {
+      alert('Please enter a number!');
+    }
 
-
-  
+    const indexNum = numArray.findIndex((num) => num === skipNumber);
+    console.log(indexNum);
+    if (indexNum !== -1 && indexNum < numArray.length - 1) {
+      this.nextNumber = numArray[indexNum + 1];
+      console.log(`Next number is ${this.nextNumber}.`);
+    } else if(indexNum == numArray.length -1) {
+      this.nextNumber = numArray[0]
+    }else {
+      alert('Number not found.');
+    }
+    // for(const num of numArray){
+    //   if(num == skipNumber){
+    //     this.nextNumber = num + 1;
+    //     console.log(this.nextNumber);
+    //   } else {
+    //     console.log('Number not found');
+    //   }
+    // }
+  }
 }
