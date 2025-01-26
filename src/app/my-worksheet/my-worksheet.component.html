@@ -20,10 +20,10 @@
         <div class="col-3 text-center">
             <label>Date Picker:</label><br />
             <input 
-                type="date"
+                type="Date"
                 class="form-control"
                 [(ngModel)]="testDate"
-                (change)="displayDate(testDate.toString()); displayTimeDate(testDate.toString())"
+                (change)="getUTCDate(testDate)"
             />
         </div>
     </div>
