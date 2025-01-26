@@ -83,21 +83,28 @@ extractVowels(inputString: string): string {
   let vowels = ['a', 'e', 'i', 'o', 'u' ];
   let newWord = '';
 
-  // for(let i = 0; i < inputString.length; i++){
-  //   const char = inputString[i].toLowerCase();
-  //   if(!vowels.includes(char)){
-  //     newWord += char;
-  //   }
-  // }
-  inputString.toLowerCase();
+  inputString =inputString.toLowerCase();
+  console.log(inputString)
   for(let i = 0; i < inputString.length; i++){
     if(!vowels.includes(inputString[i])){
       newWord += inputString[i];
     }
   }
-
   console.log(newWord);
  return newWord;
 }
+
+extractVowelsRegex(inputString: string): string {
+  let vowelsRemoved = inputString.replace(/[aeiou]/gi, '');
+  console.log(vowelsRemoved);
+  return vowelsRemoved
+}
+
+extractVowesArrayMethods(inputString: string): string{
+  let vowels = ['a', 'e', 'i', 'o', 'u' ];
+  console.log([...inputString.toLowerCase()].filter(char => !vowels.includes(char)).join(''));
+  return [...inputString.toLowerCase()].filter(char => !vowels.includes(char)).join('');
+}
+
 
 }
