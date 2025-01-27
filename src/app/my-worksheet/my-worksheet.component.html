@@ -34,31 +34,50 @@
       <div class="col-6 text-start">
         <label>Enter a Number from 1 through 10:</label><br />
         <div class="col-4 mb-2">
-          <input 
-            type="number" 
-            class="form-control" 
-            [(ngModel)]="skipNumber" 
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="skipNumber"
+            (keydown.enter)="skipThisNumber(skipNumber)"
           />
         </div>
-        <button class="btn btn-primary me-4"
-            (click)="skipThisNumber(skipNumber)"
-        >Click to Skip</button>
-        <button 
-        class="btn btn-warning" 
-        (click)="skipNumber = 0; nextNumber = 0"
-        >Reset Number</button>
-         <br />
+        <button
+          class="btn btn-primary me-4"
+          (click)="skipThisNumber(skipNumber)"
+        >
+          Click to Skip
+        </button>
+        <button
+          class="btn btn-warning"
+          (click)="skipNumber = 0; nextNumber = 0"
+        >
+          Reset Number
+        </button>
+        <br />
         <span class="col-6">
-            <span>Next Number: {{ nextNumber }} </span>
+          <span>Next Number: {{ nextNumber }} </span>
         </span>
       </div>
       <div class="col-6">
+        <label for="">Type in a word:</label><br />
+        <input
+          type="text"
+          class="form-control mb-2"
+          [(ngModel)]="wordToExtract"
+          (keydown.enter)="extractVowels(wordToExtract)"
+        />
+        <button (click)="extractVowels(wordToExtract)" class="btn btn-primary">
+          Extract Vowels
+        </button>
         <button 
-            (click)="extractVowels('skipWholeNumbersOnly'); extractVowelsRegex('skipWholeNumbersOnly'); extractVowesArrayMethods('skipWholeNumbersOnly')"
-            class="btn btn-primary"
-        >Extract Vowels</button>
+            class="btn btn-warning ms-4"
+            (click)="resetWord()"
+        >Reset Word</button>
+        <br />
+        <span class="col-6" *ngIf="isExtracted">
+          <span>Extracted! ->  {{ wordToExtract }} </span>
+        </span>
       </div>
-      
     </div>
   </div>
 </div>

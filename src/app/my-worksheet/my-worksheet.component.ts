@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +13,9 @@ export class MyWorksheetComponent {
 
   skipNumber: number;
   nextNumber: number;
+
+  wordToExtract: string;
+  isExtracted: boolean = false
 
   constructor(private router: Router) {}
 
@@ -79,7 +83,7 @@ export class MyWorksheetComponent {
     }
   }
 
-extractVowels(inputString: string): string {
+extractVowels(inputString: string) {
   let vowels = ['a', 'e', 'i', 'o', 'u' ];
   let newWord = '';
 
@@ -91,7 +95,8 @@ extractVowels(inputString: string): string {
     }
   }
   console.log(newWord);
- return newWord;
+  this.isExtracted = true;
+  this. wordToExtract = newWord;
 }
 
 extractVowelsRegex(inputString: string): string {
@@ -106,5 +111,9 @@ extractVowesArrayMethods(inputString: string): string{
   return [...inputString.toLowerCase()].filter(char => !vowels.includes(char)).join('');
 }
 
+resetWord(){
+  this.wordToExtract = '';
+  this.isExtracted = false;
+}
 
 }
