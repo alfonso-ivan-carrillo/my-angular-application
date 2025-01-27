@@ -19,6 +19,7 @@ import { RandomBookModalComponent } from './random-book-modal/random-book-modal.
 import { AlphaNumeric } from './directives/alpha-numeric.directive';
 import { UppercaseOnly } from './directives/uppercase-only.directive';
 import { SuperHeroComponent } from './super-hero/super-hero.component';
+import { AlphaOnlyDirective } from './directives/alpha-only.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SuperHeroComponent } from './super-hero/super-hero.component';
     FormsModule,
     AppRoutingModule,
     AlphaNumeric,
-    UppercaseOnly
+    UppercaseOnly,
+    AlphaOnlyDirective,
   ],
   providers: [],
   bootstrap: [AppComponent]

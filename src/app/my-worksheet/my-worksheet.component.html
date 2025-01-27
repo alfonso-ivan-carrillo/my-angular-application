@@ -49,18 +49,19 @@
         </button>
         <button
           class="btn btn-warning"
-          (click)="skipNumber = 0; nextNumber = 0"
+          (click)="skipNumber = 0; nextNumber = 0; isNextNumber = false"
         >
           Reset Number
         </button>
         <br />
-        <span class="col-6">
+        <span class="col-6" *ngIf="isNextNumber">
           <span>Next Number: {{ nextNumber }} </span>
         </span>
       </div>
       <div class="col-6">
         <label for="">Type in a word:</label><br />
         <input
+          alpha-only
           type="text"
           class="form-control mb-2"
           [(ngModel)]="wordToExtract"

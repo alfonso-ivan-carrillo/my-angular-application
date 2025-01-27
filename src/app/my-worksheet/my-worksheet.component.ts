@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { AlphaOnlyDirective } from '../directives/alpha-only.directive';
 
 @Component({
   selector: 'app-my-worksheet',
@@ -13,6 +14,7 @@ export class MyWorksheetComponent {
 
   skipNumber: number;
   nextNumber: number;
+  isNextNumber: boolean = false;
 
   wordToExtract: string;
   isExtracted: boolean = false
@@ -75,6 +77,7 @@ export class MyWorksheetComponent {
     console.log(indexNum);
     if (indexNum !== -1 && indexNum < numArray.length - 1) {
       this.nextNumber = numArray[indexNum + 1];
+      this.isNextNumber = true;
       console.log(`Next number is ${this.nextNumber}.`);
     } else if(indexNum == numArray.length -1) {
       this.nextNumber = numArray[0]
@@ -86,7 +89,7 @@ export class MyWorksheetComponent {
 extractVowels(inputString: string) {
   let vowels = ['a', 'e', 'i', 'o', 'u' ];
   let newWord = '';
-
+  if(inputString) {
   inputString =inputString.toLowerCase();
   console.log(inputString)
   for(let i = 0; i < inputString.length; i++){
@@ -97,6 +100,9 @@ extractVowels(inputString: string) {
   console.log(newWord);
   this.isExtracted = true;
   this. wordToExtract = newWord;
+} else {
+  alert('Please enter a word to extract vowels!');
+}
 }
 
 extractVowelsRegex(inputString: string): string {
