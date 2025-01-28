@@ -14,7 +14,7 @@ export class NumberOnlyDirective {
         // Get the key that was pressed
         const key = event.key;
         
-        // Regular expression to match only numbers
+
         const regex = /^[0-9]$/;
         
         // Prevent the key press if it's not a number
