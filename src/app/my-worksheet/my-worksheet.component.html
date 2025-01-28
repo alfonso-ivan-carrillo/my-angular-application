@@ -35,6 +35,7 @@
         <label>Enter a Number from 1 through 10:</label><br />
         <div class="col-4 mb-2">
           <input
+            numeric-only
             type="number"
             class="form-control"
             [(ngModel)]="skipNumber"
@@ -79,6 +80,20 @@
           <span>Extracted! ->  {{ wordToExtract }} </span>
         </span>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <label for="">Word:</label><br />
+      <input 
+        numeric-only
+        type="text" 
+        class="form-control" 
+        [(ngModel)]="wordToGuess"
+      />
     </div>
   </div>
 </div>

@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 export class AlphaOnlyDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  @HostListener('Keypress', ['$event']) onKeypress(event: KeyboardEvent) {
+  @HostListener('keypress', ['$event']) onKeypress(event: KeyboardEvent) {
     this.validateInput(event);
   }
 

@@ -12,6 +12,8 @@ import { AlphaOnlyDirective } from '../directives/alpha-only.directive';
 export class MyWorksheetComponent {
   testDate: string = new Date().toISOString().split('T')[0];
 
+  wordToGuess: number;
+
   skipNumber: number;
   nextNumber: number;
   isNextNumber: boolean = false;

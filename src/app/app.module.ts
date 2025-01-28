@@ -20,6 +20,7 @@ import { AlphaNumeric } from './directives/alpha-numeric.directive';
 import { UppercaseOnly } from './directives/uppercase-only.directive';
 import { SuperHeroComponent } from './super-hero/super-hero.component';
 import { AlphaOnlyDirective } from './directives/alpha-only.directive';
+import { NumberOnlyDirective } from './directives/numeric-only.directive';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AlphaOnlyDirective } from './directives/alpha-only.directive';
     AlphaNumeric,
     UppercaseOnly,
     AlphaOnlyDirective,
+    NumberOnlyDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
