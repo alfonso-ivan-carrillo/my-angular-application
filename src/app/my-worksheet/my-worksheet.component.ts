@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AlphaOnlyDirective } from '../directives/alpha-only.directive';
@@ -9,8 +9,9 @@ import { AlphaOnlyDirective } from '../directives/alpha-only.directive';
   styleUrls: ['./my-worksheet.component.css'],
   standalone: false,
 })
-export class MyWorksheetComponent {
+export class MyWorksheetComponent implements OnInit {
   testDate: string = new Date().toISOString().split('T')[0];
+  minDate: string = new Date().toISOString().split('T')[0];
 
   wordToGuess: number;
 
@@ -20,8 +21,16 @@ export class MyWorksheetComponent {
 
   wordToExtract: string;
   isExtracted: boolean = false
+   
+  dating: Date = new Date();
 
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+  const today = new Date();
+  const localDate = today.toLocaleDateString('en-CA');
+  this.minDate = localDate;
+  }
 
   routeToPage(page: string) {
     this.router
@@ -53,7 +62,6 @@ export class MyWorksheetComponent {
 
   getUTCDate(dateString: string) {
     let date = new Date(dateString);
-    console.log(date);
     let now_utc = Date.UTC(
       date.getUTCFullYear(), // Gets year in UTC (e.g., 2024)
       date.getUTCMonth(), // Gets month in UTC (0-11, where 0 = January)

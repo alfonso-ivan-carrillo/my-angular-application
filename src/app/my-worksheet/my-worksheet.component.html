@@ -23,6 +23,7 @@
         class="form-control"
         [(ngModel)]="testDate"
         (change)="getUTCDate(testDate)"
+        [max]="minDate"
       />
     </div>
   </div>
