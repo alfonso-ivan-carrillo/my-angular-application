@@ -12,6 +12,7 @@ import { AlphaOnlyDirective } from '../directives/alpha-only.directive';
 export class MyWorksheetComponent implements OnInit {
   testDate: string = new Date().toISOString().split('T')[0];
   minDate: string = new Date().toISOString().split('T')[0];
+  maxDate: string = new Date().toISOString().split('T')[0];
 
   wordToGuess: number;
 
@@ -27,9 +28,8 @@ export class MyWorksheetComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-  const today = new Date();
-  const localDate = today.toLocaleDateString('en-CA');
-  this.minDate = localDate;
+    this.minDateCalulation();
+    this.maxDateCalulation();
   }
 
   routeToPage(page: string) {
@@ -41,6 +41,20 @@ export class MyWorksheetComponent implements OnInit {
       .catch((error) => {
         console.error('Navigation to ' + page + ' failed:', error);
       });
+  }
+
+  minDateCalulation(){
+    const today = new Date();
+    const localDate = today.toLocaleDateString('en-CA');
+    this.minDate = localDate;
+  }
+
+  maxDateCalulation(){
+    const today = new Date();
+    const nextYearDate = new Date(today);
+    nextYearDate.setFullYear(today.getFullYear() + 1);
+    this.maxDate = nextYearDate.toISOString().split('T')[0];
+    console.log(this.maxDate);
   }
 
   displayDate(inputDate: string) {
@@ -70,8 +84,6 @@ export class MyWorksheetComponent implements OnInit {
       date.getUTCMinutes(), // Gets minutes in UTC (0-59)
       date.getUTCSeconds() // Gets seconds in UTC (0-59)
     );
-
-    console.log(now_utc);
     let utcDate = new Date(now_utc);
     console.log(utcDate);
   }
@@ -84,7 +96,6 @@ export class MyWorksheetComponent implements OnInit {
     }
 
     const indexNum = numArray.findIndex((num) => num === skipNumber);
-    console.log(indexNum);
     if (indexNum !== -1 && indexNum < numArray.length - 1) {
       this.nextNumber = numArray[indexNum + 1];
       this.isNextNumber = true;
@@ -101,13 +112,11 @@ extractVowels(inputString: string) {
   let newWord = '';
   if(inputString) {
   inputString =inputString.toLowerCase();
-  console.log(inputString)
   for(let i = 0; i < inputString.length; i++){
     if(!vowels.includes(inputString[i])){
       newWord += inputString[i];
     }
   }
-  console.log(newWord);
   this.isExtracted = true;
   this. wordToExtract = newWord;
 } else {
@@ -117,7 +126,6 @@ extractVowels(inputString: string) {
 
 extractVowelsRegex(inputString: string): string {
   let vowelsRemoved = inputString.replace(/[aeiou]/gi, '');
-  console.log(vowelsRemoved);
   return vowelsRemoved
 }
 
