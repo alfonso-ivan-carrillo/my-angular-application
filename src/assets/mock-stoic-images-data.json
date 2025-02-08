@@ -1,0 +1,147 @@
+[
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus1.jpeg",
+        "caption": "Epictetus saying 1"
+    },
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus2.jpeg",
+        "caption": "Epictetus saying 2"
+    },
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus3.jpeg",
+        "caption": "Epictetus saying 3"
+    },
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus4.jpeg",
+        "caption": "Epictetus saying 4"
+    }, 
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus5.jpeg",
+        "caption": "Epictetus saying 5"
+    }, 
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus6.jpeg",
+        "caption": "Epictetus saying 6"
+    }, 
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus7.jpeg",
+        "caption": "Epictetus saying 7"
+    }, 
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus8.jpeg",
+        "caption": "Epictetus saying 8"
+    },
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus9.jpeg",
+        "caption": "Epictetus saying "
+    }, 
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus10.jpeg",
+        "caption": "Epictetus saying 10"
+    }, 
+    {
+        "stoicId": 3,
+        "imageUrl": "assets/stoicImages/epictetus11.jpeg",
+        "caption": "Epictetus saying 11"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/epictetus1.jpeg",
+        "caption": "Epictetus saying 1"
+    },
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius1.jpeg",
+        "caption": "Marcus Aurelius saying 1"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius2.jpeg",
+        "caption": "Marcus Aurelius saying 2"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius3.jpeg",
+        "caption": "Marcus Aurelius saying 3"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius4.jpeg",
+        "caption": "Marcus Aurelius saying 4"
+    },
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius5.jpeg",
+        "caption": "Marcus Aurelius saying 5"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius6.jpeg",
+        "caption": "Marcus Aurelius saying 6"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius7.jpeg",
+        "caption": "Marcus Aurelius saying 7"
+    }, 
+    {
+        "stoicId": 1,
+        "imageUrl": "assets/stoicImages/aurelius8.jpeg",
+        "caption": "Marcus Aurelius saying 8"
+    },
+    {
+        "stoicId": 2,
+        "imageUrl": "assets/stoicImages/cato1.jpeg",
+        "caption": "Cato saying 1"
+    },
+    {
+        "stoicId": 2,
+        "imageUrl": "assets/stoicImages/cato2.jpeg",
+        "caption": "Cato saying 2"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca1.jpeg",
+        "caption": "Senca saying 1"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca2.jpeg",
+        "caption": "Senca saying 2"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca3.jpeg",
+        "caption": "Senca saying 3"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca4.jpeg",
+        "caption": "Senca saying 4"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca5.jpeg",
+        "caption": "Senca saying 5"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca6.jpeg",
+        "caption": "Senca saying 6"
+    },
+    {
+        "stoicId": 4,
+        "imageUrl": "assets/stoicImages/senca7.jpeg",
+        "caption": "Senca saying 7"
+    }
+]
