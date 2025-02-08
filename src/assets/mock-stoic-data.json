@@ -1,26 +1,28 @@
 {
-    "1": {
-        "id": 1,
-        "name": "Aurelius",
-        "description": "Roman emperor and stoic philosopher",
-        "category": "Roman Stoicism"
+  "stoics": [
+    {
+      "id": 1,
+      "name": "Aurelius",
+      "description": "Roman emperor and stoic philosopher",
+      "category": "Roman Stoicism"
     },
-    "2": {
-        "id": 2,
-        "name": "Cato",
-        "description": "Roman statesman, senator, and stoic philosopher",
-        "category": "Roman Stoicism"
-    }, 
-    "3": {
-        "id": 3,
-        "name": "Epictetus",
-        "description": "Former slave who became a prominent stoic philosopher",
-        "category": "Roman Stoicism"
+    {
+      "id": 2,
+      "name": "Cato",
+      "description": "Roman statesman, senator, and stoic philosopher",
+      "category": "Roman Stoicism"
     },
-    "4": {
-        "id": 4,
-        "name": "Senca",
-        "description": "Statesman, philosopher, and dramatist",
-        "category": "Roman Stoicism"
+    {
+      "id": 3,
+      "name": "Epictetus",
+      "description": "Former slave who became a prominent stoic philosopher",
+      "category": "Roman Stoicism"
+    },
+    {
+      "id": 4,
+      "name": "Senca",
+      "description": "Statesman, philosopher, and dramatist",
+      "category": "Roman Stoicism"
     }
+  ]
 }

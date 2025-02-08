@@ -6,14 +6,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
-export class BookAPIService {
-  private dataUrl = 'assets/mock-book-data.json';
+export class StoicAPIService {
+  private stoicUrl = 'assets/mock-stoic-data.json';
 
   constructor(private http: HttpClient) {}
 
-  getBooks(): Observable<any[]> {
+  getStoics(): Observable<any[]> {
     return this.http
-      .get<any>(this.dataUrl)
-      .pipe(map((data) => Object.values(data.books)));
+      .get<any>(this.stoicUrl)
+      .pipe(map((data) => Object.values(data.stoics)));
   }
 }
