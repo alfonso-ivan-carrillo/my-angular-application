@@ -23,6 +23,43 @@
       "name": "Senca",
       "description": "Statesman, philosopher, and dramatist",
       "category": "Roman Stoicism"
+    },
+    {
+        "id": 5,
+        "name": "Zeno of Citium",
+        "description": "Father of Stoicism",
+        "category": "Greek Stoicism"
+    },
+    {
+        "id": 6,
+        "name": "Chrysippus",
+        "description": "Stoic philosopher and statesman",
+        "category": "Greek Stoicism"
+    },
+    {
+        "id": 7,
+        "name": "Cleanthes",
+        "description": "Stoic philosopher and statesman",
+        "category": "Greek Stoicism"
+    },
+    {
+        "id": 8,
+        "name": "Ryan Holiday",
+        "description": "Stoic philosopher and podcaster",
+        "category": "American Stoicism"
+    },
+    {
+        "id": 9,
+        "name": "John Dewey",
+        "description": "Stoic philosopher and psychologist",
+        "category": "American Stoicism"
+    },
+    {
+        "id": 10,
+        "name": "Donald Robertson",
+        "description": "Stoic philosopher and author",
+        "category": "American Stoicism"
     }
+    
   ]
 }

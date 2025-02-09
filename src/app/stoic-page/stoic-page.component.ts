@@ -39,6 +39,7 @@ export class StoicPageComponent implements OnInit {
   getStoicbyName(name: string){
     this.stoicService.getStoicsByName(name).subscribe((data) => {
       this.selectedStoic = data;
+      console.log(this.selectedStoic);
       this.byRadio = true;
     });
   }
