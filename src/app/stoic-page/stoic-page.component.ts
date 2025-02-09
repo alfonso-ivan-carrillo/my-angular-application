@@ -11,6 +11,8 @@ import { StoicAPIService } from '../services/stoicAPI.service';
 })
 export class StoicPageComponent implements OnInit {
   stoics: Stoic[] = [];
+  stoicOption: string;
+  selectedStoic: Stoic[] = [];
 
   constructor(
     private router: Router,
@@ -22,7 +24,6 @@ export class StoicPageComponent implements OnInit {
       this.stoics = data;
       console.log(this.stoics);
     })
-    
   }
 
   routeToPage(page: string){
@@ -31,6 +32,14 @@ export class StoicPageComponent implements OnInit {
     }).catch((error) => {
       console.error('Navigation to ' + page + ' failed:', error);
     });
+  }
+
+  getStoicbyName(name: string){
+    console.log(name)
+    this.stoicService.getStoicsByName(name).subscribe((data) => {
+      this.selectedStoic = data;
+      console.log(this.selectedStoic)
+    })
   }
 
 }

@@ -12,5 +12,67 @@
     </div>
 </div>
 
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-4">
+                <h3>The Stoics</h3>
+            </div>
+        </div>
+        <div class="row">
+            <span *ngFor="let stoic of stoics" class="mb-3">
+            <div class="col-4">
+                <span><strong>Stoic Name:</strong> {{ stoic.name }}</span><br />
+                <span><strong>Description:</strong> {{ stoic.description }} </span><br />   
+                <span><strong>Category:</strong> {{ stoic.category }}</span>             
+            </div>
+        </span>
+        </div>
+    </div>
+</div>
 
-
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <input 
+                    type="radio"
+                    name="stoicOption"
+                    value="Aurelius"
+                    [checked]="stoicOption === 'Aurelius'"
+                    (change)="getStoicbyName('Aurelius')"
+                />
+                <label class="ms-2">Aurelius</label>
+            </div>
+            <div class="col-2">
+                <input type="radio"
+                    name="stoicOption"
+                    value="Cato"
+                    [checked]="stoicOption === 'Cato'"
+                    (change)="getStoicbyName('Cato')"
+                />
+                <label class="ms-2">Cato</label>
+            </div>
+            <div class="col-2">
+                <input 
+                    type="radio"
+                    name="stoicOption"
+                    value="Epictetus"
+                    [checked]="stoicOption === 'Epictetus'"
+                    (change)="getStoicbyName('Epictetus')"
+                />
+                <label class="ms-2">Epictetus</label>
+            </div>
+            <div class="col-2">
+                <input 
+                   type="radio"
+                    name="stoicOption"
+                    value="Senca"
+                    [checked]="stoicOption === 'Senca'"
+                    (change)="getStoicbyName('Senca')"
+                />
+                <label class="ms-2">Senca</label>
+            </div>
+        </div>
+    </div>
+</div>
