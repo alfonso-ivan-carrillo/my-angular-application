@@ -73,6 +73,16 @@
                 />
                 <label class="ms-2">Senca</label>
             </div>
+            <div class="col-1 ms-auto">
+                <button class="btn btn-primary" (click)="byRadio = !byRadio">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="byRadio">
+        <div class="col-4" *ngFor="let stoic of selectedStoic">
+            <span><strong>Stoic Name:</strong> {{ stoic.name }}</span><br />
+            <span><strong>Description:</strong> {{ stoic.description }} </span><br />   
+            <span><strong>Category:</strong> {{ stoic.category }}</span>
         </div>
     </div>
 </div>

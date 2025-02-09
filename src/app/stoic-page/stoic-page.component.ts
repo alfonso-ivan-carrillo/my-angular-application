@@ -13,6 +13,8 @@ export class StoicPageComponent implements OnInit {
   stoics: Stoic[] = [];
   stoicOption: string;
   selectedStoic: Stoic[] = [];
+  byRadio: boolean = false;
+
 
   constructor(
     private router: Router,
@@ -35,11 +37,10 @@ export class StoicPageComponent implements OnInit {
   }
 
   getStoicbyName(name: string){
-    console.log(name)
     this.stoicService.getStoicsByName(name).subscribe((data) => {
       this.selectedStoic = data;
-      console.log(this.selectedStoic)
-    })
+      this.byRadio = true;
+    });
   }
 
 }
