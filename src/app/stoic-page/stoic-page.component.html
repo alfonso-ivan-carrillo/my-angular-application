@@ -93,26 +93,46 @@
       </button>
     </div>
   </div>
-</div>
-
-<div class="card">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-2">
-        <input type="radio" name="byCategory" value="Roman Stoicism" />
-        <label for="Roman Stoicism" class="ms-2">Roman Stoicism</label>
-      </div>
-      <div class="col-2">
-        <input type="radio" name="byCategory" value="Greek Stoicism" />
-        <label for="Greek Stoicism" class="ms-2">Greek Stoicism</label>
-      </div>
-      <div class="col-2">
-        <input type="radio" name="byCategory" value="American Stoicism" />
-        <label for="American Stoicism" class="ms-2">American Stoicism</label>
-      </div>
-      <div class="col-1 ms-auto">
-        <button class="btn btn-primary">Close</button>
-      </div>
+  <hr>
+  <div class="row">
+    <div class="col-2 m-2">
+      <input type="radio" 
+             name="byCategory"
+             value="Roman Stoicism"
+             [checked]="stoicCategory === 'Roman Stoicism'"
+             (change)="getStoicbyCategory('Roman Stoicism')"
+      />
+      <label for="Roman Stoicism" class="ms-2">Roman Stoicism</label>
+    </div>
+    <div class="col-2 m-2">
+      <input type="radio" 
+             name="byCategory"
+             value="Greek Stoicism"
+             [checked]="stoicCategory === 'Greek Stoicism'"
+             (change)="getStoicbyCategory('Greek Stoicism')"
+      />
+      <label for="Roman Stoicism" class="ms-2">Greek Stoicism</label>
+    </div>
+    <div class="col-2 m-2">
+      <input type="radio" 
+             name="byCategory"
+             value="American Stoicism"
+             [checked]="stoicCategory === 'American Stoicism'"
+             (change)="getStoicbyCategory('American Stoicism')"
+      />
+      <label for="Roman Stoicism" class="ms-2">American Stoicism</label>
+    </div>
+    <div class="col-1 ms-auto" *ngIf="byCategory">
+      <button class="btn btn-primary" (click)="byCategory = !byCategory">Close</button>
     </div>
   </div>
+  <div class="row" *ngIf="byCategory">
+      <li *ngFor="let stoic of selectedCategory" class="col-4 mb-3">
+        <label><strong>Stoic Name: </strong>{{ stoic.name }}</label><br />
+        <label><strong>Description: </strong>{{ stoic.description }}</label><br />
+        <label><strong>Category: </strong>{{ stoic.category }}</label><br />
+        <hr>
+      </li>
 </div>
+
+

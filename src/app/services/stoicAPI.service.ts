@@ -29,4 +29,9 @@ export class StoicAPIService {
         )
       );
   }
+
+  getStoicsByCategory(category: string): Observable<Stoic[]> {
+    return this.http.get<{ stoics: Stoic[] }>(this.stoicsUrl)
+    .pipe(map((data) => data.stoics.filter((data) => data.category.toLowerCase() === category.toLowerCase())));
+  }
 }

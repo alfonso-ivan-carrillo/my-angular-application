@@ -12,8 +12,12 @@ import { StoicAPIService } from '../services/stoicAPI.service';
 export class StoicPageComponent implements OnInit {
   stoics: Stoic[] = [];
   stoicOption: string;
+  stoicCategory: string;
   selectedStoic: Stoic[] = [];
+  selectedCategory: Stoic[] = [];
   byRadio: boolean = false;
+  byCategory: boolean = false;
+  numPerColumns: number = 1;
 
 
   constructor(
@@ -22,10 +26,11 @@ export class StoicPageComponent implements OnInit {
   ){}
 
   ngOnInit(){
-    this.stoicService.getStoics().subscribe((data) => {
-      this.stoics = data;
-      console.log(this.stoics);
-    })
+    // this.stoicService.getStoics().subscribe((data) => {
+    //   this.stoics = data;
+    //   console.log(this.stoics);
+    // })
+
   }
 
   routeToPage(page: string){
@@ -43,5 +48,24 @@ export class StoicPageComponent implements OnInit {
       this.byRadio = true;
     });
   }
+
+  getStoicbyCategory(category: string){
+    this.stoicService.getStoicsByCategory(category).subscribe((data) => {
+      this.selectedCategory =  data;
+      this.chunkingArray(this.selectedCategory);
+      this.byCategory = true;
+      console.log(this.selectedCategory);
+    })
+  }
+
+  chunkingArray(columnArray: Stoic[]) {
+        console.log(columnArray);
+        const chunkedArray = [];
+        for (let i = 0; i < columnArray.length; i += this.numPerColumns) {
+          const chunk = columnArray.slice(i, i + this.numPerColumns);
+          chunkedArray.push(chunk);  
+        }
+          columnArray = chunkedArray;
+      }
 
 }
