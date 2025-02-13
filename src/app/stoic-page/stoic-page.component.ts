@@ -19,6 +19,8 @@ export class StoicPageComponent implements OnInit {
   byCategory: boolean = false;
   numPerColumns: number = 1;
 
+  stoicsArray: Stoic [] = [];
+
 
   constructor(
     private router: Router,
@@ -30,6 +32,10 @@ export class StoicPageComponent implements OnInit {
     //   this.stoics = data;
     //   console.log(this.stoics);
     // })
+    this.stoicService.getStoics().subscribe((data) => {
+      this.stoicsArray = data;
+      this.chunkingArray(this.stoicsArray, 2);
+    })
 
   }
 
@@ -52,20 +58,30 @@ export class StoicPageComponent implements OnInit {
   getStoicbyCategory(category: string){
     this.stoicService.getStoicsByCategory(category).subscribe((data) => {
       this.selectedCategory =  data;
-      this.chunkingArray(this.selectedCategory);
+      this.chunkingArray(this.selectedCategory, this.numPerColumns);
       this.byCategory = true;
       console.log(this.selectedCategory);
     })
   }
 
-  chunkingArray(columnArray: Stoic[]) {
+  chunkingArray(columnArray: Stoic[], numPerColumns: number) {
         console.log(columnArray);
         const chunkedArray = [];
-        for (let i = 0; i < columnArray.length; i += this.numPerColumns) {
-          const chunk = columnArray.slice(i, i + this.numPerColumns);
+        for (let i = 0; i < columnArray.length; i += numPerColumns) {
+          const chunk = columnArray.slice(i, i + numPerColumns);
           chunkedArray.push(chunk);  
         }
           columnArray = chunkedArray;
       }
+
+
+  changeStoicArray(category: string){
+    let tempArray: Stoic[] = [];
+    this.stoicService.getStoicsByCategory(category).subscribe((data) => {
+      tempArray = data;
+      // Array.prototype.push.apply(this.stoicsArray, tempArray);
+      this.stoicsArray.splice(0, this.stoicsArray.length, ...tempArray);
+    })
+  }
 
 }
