@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Stoic } from '../models/Stoic.model';
 import { StoicAPIService } from '../services/stoicAPI.service';
-
+import { map } from 'rxjs/operators';
 @Component({
     selector: 'app-stoic-page',
     templateUrl: './stoic-page.component.html',
@@ -20,6 +20,8 @@ export class StoicPageComponent implements OnInit {
   numPerColumns: number = 1;
 
   stoicsArray: Stoic [] = [];
+  testArray: Stoic [] = [];
+  wordsArray: string[] = []; 
 
 
   constructor(
@@ -28,12 +30,29 @@ export class StoicPageComponent implements OnInit {
   ){}
 
   ngOnInit(){
-    // this.stoicService.getStoics().subscribe((data) => {
-    //   this.stoics = data;
-    //   console.log(this.stoics);
-    // })
+    this.stoicService.getStoics().pipe(
+      map(data => data.map(stoic => ({
+        ...stoic,
+        name: stoic.name.toUpperCase(),
+        description: stoic.description.toUpperCase(),
+        category: stoic.category.toUpperCase()
+      })))).subscribe(data => {
+        this.testArray = data;
+        console.log(this.testArray);
+      });
+
+      this.stoicService.getStoics().pipe(
+        map(data => data.map(stoic => stoic.name))
+      ).subscribe(data => {
+        this.wordsArray = data;
+        console.log(this.wordsArray);
+      })
+
+   
+  
     this.stoicService.getStoics().subscribe((data) => {
       this.stoicsArray = data;
+      console.log(this.stoicsArray)
       this.chunkingArray(this.stoicsArray, 2);
     })
 
