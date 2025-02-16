@@ -22,13 +22,29 @@
       </div>
     </div>
     <div class="row">
-      <span *ngFor="let stoic of stoics" class="mb-3">
+      <div class="col-4">
         <div class="col-4">
-          <span><strong>Stoic Name:</strong> {{ stoic.name }}</span
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search by Name"
+            [(ngModel)]="searchByLetter"
+            maxlength="1"
+          />
+          <label class="ms-1">Search by Letter</label>
+        </div>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-primary"
+          (click)="filterStoics(searchByLetter)"
+        >Search</button>
+      </div>
+    </div>
+    <div class="row">
+      <span *ngFor="let stoic of filteredStoics" class="mb-3">
+        <div class="col-4">
+          <span><strong>Stoic Name:</strong> {{ stoic}}</span
           ><br />
-          <span><strong>Description:</strong> {{ stoic.description }} </span
-          ><br />
-          <span><strong>Category:</strong> {{ stoic.category }}</span>
         </div>
       </span>
     </div>
@@ -174,18 +190,17 @@
           </button>
         </div>
       </div>
-        <div class="row mt-4">
-          <li *ngFor="let stoic of stoicsArray" class="col-4 mb-3">
-            <label><strong>Stoic Name: </strong>{{ stoic.name }}</label
-            ><br />
-            <label><strong>Description: </strong>{{ stoic.description }}</label
-            ><br />
-            <label><strong>Category: </strong>{{ stoic.category }}</label
-            ><br />
-            <hr />
-          </li>
-        </div>
-      
+      <div class="row mt-4">
+        <li *ngFor="let stoic of stoicsArray" class="col-4 mb-3">
+          <label><strong>Stoic Name: </strong>{{ stoic.name }}</label
+          ><br />
+          <label><strong>Description: </strong>{{ stoic.description }}</label
+          ><br />
+          <label><strong>Category: </strong>{{ stoic.category }}</label
+          ><br />
+          <hr />
+        </li>
+      </div>
     </div>
   </div>
 </div>
