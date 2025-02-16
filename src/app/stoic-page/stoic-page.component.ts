@@ -132,8 +132,15 @@ export class StoicPageComponent implements OnInit {
 
   filterStoics(searchByLetter: string) {
     this.filteredStoics = this.wordsArray.filter(
-      (stoic) => stoic.startsWith(searchByLetter)
+      (stoic) => stoic.startsWith(searchByLetter.toUpperCase())
     );
     console.log(this.filteredStoics);
+    if(this.filteredStoics.length === 0){
+      this.searchByLetter = '';
+      alert('No Stoics found');
+    } else {
+      this.searchByLetter = '';
+    }
   }
+
 }

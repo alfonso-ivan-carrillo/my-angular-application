@@ -36,11 +36,12 @@
       </div>
       <div class="col-2">
         <button class="btn btn-primary"
+         [disabled]="!searchByLetter"
           (click)="filterStoics(searchByLetter)"
-        >Search</button>
+        >Search by Letter</button>
       </div>
     </div>
-    <div class="row">
+    <div class="row mt-3">
       <span *ngFor="let stoic of filteredStoics" class="mb-3">
         <div class="col-4">
           <span><strong>Stoic Name:</strong> {{ stoic}}</span
