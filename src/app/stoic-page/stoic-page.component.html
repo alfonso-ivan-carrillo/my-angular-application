@@ -35,19 +35,27 @@
         </div>
       </div>
       <div class="col-2">
-        <button class="btn btn-primary"
-         [disabled]="!searchByLetter"
+        <button
+          class="btn btn-primary"
+          [disabled]="!searchByLetter"
           (click)="filterStoics(searchByLetter)"
-        >Search by Letter</button>
+        >
+          Search by Letter
+        </button>
       </div>
     </div>
-    <div class="row mt-3">
-      <span *ngFor="let stoic of filteredStoics" class="mb-3">
-        <div class="col-4">
-          <span><strong>Stoic Name:</strong> {{ stoic}}</span
+    <div class="row mt-3" *ngIf="isFiltered">
+      <div class="col-4">
+        <span *ngFor="let stoic of filteredStoics" class="mb-3">
+          <span><strong>Stoic Name:</strong> {{ stoic }}</span
           ><br />
-        </div>
-      </span>
+        </span>
+      </div>
+      <div class="col-1">
+        <button class="btn btn-danger" (click)="isFiltered = !isFiltered">
+          X
+        </button>
+      </div>
     </div>
   </div>
 </div>

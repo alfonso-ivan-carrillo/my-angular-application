@@ -26,6 +26,7 @@ export class StoicPageComponent implements OnInit {
   filterCat: string[] = [];
   filteredStoics: string[] = [];
   searchByLetter: string = '';
+  isFiltered: boolean = false;
 
   constructor(private router: Router, private stoicService: StoicAPIService) {}
 
@@ -137,8 +138,10 @@ export class StoicPageComponent implements OnInit {
     console.log(this.filteredStoics);
     if(this.filteredStoics.length === 0){
       this.searchByLetter = '';
+      this.isFiltered = false;
       alert('No Stoics found');
     } else {
+      this.isFiltered = true;
       this.searchByLetter = '';
     }
   }
