@@ -22,6 +22,8 @@ export class StoicPageComponent implements OnInit {
   stoicsArray: Stoic [] = [];
   testArray: Stoic [] = [];
   wordsArray: string[] = []; 
+  filterArray: string[] = [];
+  filterCat: string[] = [];
 
 
   constructor(
@@ -43,10 +45,24 @@ export class StoicPageComponent implements OnInit {
 
       this.stoicService.getStoics().pipe(
         map(data => data.map(stoic => stoic.name))
-      ).subscribe(data => {
-        this.wordsArray = data;
+      ).subscribe(names => {  // names = transformed data that contains the names of the stoics
+        this.wordsArray = names;
         console.log(this.wordsArray);
-      })
+      });
+
+      this.stoicService.getStoics().pipe(
+        map(data => data.filter(stoic => stoic.name.startsWith('S'))))
+        .subscribe(filteredNames => {
+          this.filterArray = filteredNames;
+          console.log(this.filterArray);
+        });
+
+      this.stoicService.getStoics().pipe(
+        map(data => data.filter(stoic => stoic.category === 'Roman Stoicism')))
+        .subscribe(cat => {
+          this.filterCat = cat;
+          console.log(this.filterCat);
+        })
 
    
   
