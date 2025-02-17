@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StoicImageAPIService } from '../services/stoicImageAPI.service';
+import { StoicImages } from '../models/Stoic-Images.model';
+import { OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-picture-page',
@@ -7,8 +10,21 @@ import { Router } from '@angular/router';
     styleUrls: ['./picture-page.component.css'],
     standalone: false
 })
-export class PicturePageComponent {
-  constructor(private router: Router) {}
+export class PicturePageComponent implements OnInit {
+  stoicImages: StoicImages[] = [];
+
+
+  constructor(
+    private router: Router,
+    private stoicImageAPIService: StoicImageAPIService
+  ) {}
+
+  ngOnInit(){
+    this.stoicImageAPIService.getStoicImages().subscribe((data) => {
+      this.stoicImages = data;
+      console.log(this.stoicImages);
+    })
+  }
 
   routeToPage(page: string) {
     this.router
