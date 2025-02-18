@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { StoicImageAPIService } from '../services/stoicImageAPI.service';
 import { StoicImages } from '../models/Stoic-Images.model';
+import { Stoic } from '../models/Stoic.model';
+import { StoicAPIService } from '../services/stoicAPI.service';
 import { OnInit } from '@angular/core';
 
 @Component({
@@ -12,17 +14,23 @@ import { OnInit } from '@angular/core';
 })
 export class PicturePageComponent implements OnInit {
   stoicImages: StoicImages[] = [];
+  stoics: Stoic[] = [];
 
 
   constructor(
     private router: Router,
-    private stoicImageAPIService: StoicImageAPIService
+    private stoicImageAPIService: StoicImageAPIService,
+    private stoicAPIService: StoicAPIService
   ) {}
 
   ngOnInit(){
     this.stoicImageAPIService.getStoicImages().subscribe((data) => {
       this.stoicImages = data;
       console.log(this.stoicImages);
+    });
+    this.stoicAPIService.getStoics().subscribe((data) => {
+      this.stoics = data;
+      console.log(this.stoics);
     })
   }
 

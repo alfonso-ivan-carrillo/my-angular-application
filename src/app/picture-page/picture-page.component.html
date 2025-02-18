@@ -12,14 +12,19 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <div class="col-6">
-          <div>
+        <div class="col-8 mb-2" *ngFor="let stoic of stoicImages"> 
+          <span><strong>Id: </strong>{{ stoic.id }}</span><br />
+          <span><strong>Stoic Id: </strong>{{ stoic.stoicId }}</span><br />
+          <div 
+            class="img-container"
+            style="width: 150px; height: 200px;"
+          >
             <img 
             class="img-fluid"
-            style="width: 100px; height: 150px"
-            
-            />
+            style="width: 150px; height: 200px;"
+            src="{{ stoic.imageUrl }}" alt="Stoic Image" class="img-fluid" />
           </div>
+          <span><strong>Stoic Caption: </strong>{{ stoic.caption }}</span><br />
         </div>
       </div>
     </div>
