@@ -3,210 +3,210 @@
         "id": 1,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus1.jpeg",
-        "caption": "Epictetus saying 1"
+        "caption": "Who then is invincible? The one who cannot be upset by anything outside their reasoned choice."
     },
     {
         "id": 2,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus2.jpeg",
-        "caption": "Epictetus saying 2"
+        "caption": "It is unrealistic to expect people to see you as you see yourself."
     },
     {
         "id": 3,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus3.jpeg",
-        "caption": "Epictetus saying 3"
+        "caption": "If your choices are beautiful, so too will you be."
     },
     {
         "id": 4,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus4.jpeg",
-        "caption": "Epictetus saying 4"
+        "caption": "The essence of philosophy is that a man should so live that his happiness shall depend as little as possible on external things."
     }, 
     {
         "id": 5,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus5.jpeg",
-        "caption": "Epictetus saying 5"
+        "caption": "If you are ever tempted to look for outside approval, realize that you have compromised your integrity. If you need a witness, be your own."
     }, 
     {
         "id": 6,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus6.jpeg",
-        "caption": "Epictetus saying 6"
+        "caption": "Nothing important comes into being overnight; even grapes or figs need time to ripen."
     }, 
     {
         "id": 7,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus7.jpeg",
-        "caption": "Epictetus saying 7"
+        "caption": "We control our opinion, choice, desire, aversion, and, in a word, everything of our own doing."
     }, 
     {
         "id": 8,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus8.jpeg",
-        "caption": "Epictetus saying 8"
+        "caption": "It is essential that we not respond impulsively... take a moment before reacting, and you will find it is easier to maintain control."
     },
     {
         "id": 9,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus9.jpeg",
-        "caption": "Epictetus saying "
+        "caption": "A ship should not ride on a single anchor, nor life on a single hope."
     }, 
     {
         "id": 10,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus10.jpeg",
-        "caption": "Epictetus saying 10"
+        "caption": "First learn the meaning of what you say, and then speak discourses."
     }, 
     {
         "id": 11,
         "stoicId": 3,
         "imageUrl": "assets/images/stoicImages/epictetus11.jpeg",
-        "caption": "Epictetus saying 11"
+        "caption": "It is the part of a wise man to resist pleasures, but of a foolish man to be a slave to them."
     }, 
     {
         "id": 12,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/epictetus1.jpeg",
-        "caption": "Epictetus saying 1"
+        "caption": "Who then is invincible? The one who cannot be upset by anything outside their reasoned choice."
     },
     {
         "id": 13,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius1.jpeg",
-        "caption": "Marcus Aurelius saying 1"
+        "caption": "Frightened of change? But what can exist without it?"
     }, 
     {
         "id": 14,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius2.jpeg",
-        "caption": "Marcus Aurelius saying 2"
+        "caption": "Other people's mistakes? Leave them to their makers."
     }, 
     {
         "id": 15,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius3.jpeg",
-        "caption": "Marcus Aurelius saying 3"
+        "caption": "Let each thing you would do, say, or intend be like that of a dying person."
     }, 
     {
         "id": 16,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius4.jpeg",
-        "caption": "Marcus Aurelius saying 4"
+        "caption": "The impediment to action advances action. What stands in the way becomes the way."
     },
     {
         "id": 17,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius5.jpeg",
-        "caption": "Marcus Aurelius saying 5"
+        "caption": "You have power over your mind, not outside events"
     }, 
     {
         "id": 18,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius6.jpeg",
-        "caption": "Marcus Aurelius saying 6"
+        "caption": "Stop allowing your mind to be a slave, to be jerked about."
     }, 
     {
         "id": 19,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius7.PNG",
-        "caption": "Marcus Aurelius saying 7"
+        "caption": "Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present."
     }, 
     {
         "id": 20,
         "stoicId": 1,
         "imageUrl": "assets/images/stoicImages/aurelius8.jpeg",
-        "caption": "Marcus Aurelius saying 8"
+        "caption": "Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present."
     },
     {
         "id": 21,
         "stoicId": 2,
         "imageUrl": "assets/images/stoicImages/cato1.jpeg",
-        "caption": "Cato saying 1"
+        "caption": "I begin to speak only when I'm certain what I'll say isn't better left unsaid."
     },
     {
         "id": 22,
         "stoicId": 2,
         "imageUrl": "assets/images/stoicImages/cato2.jpeg",
-        "caption": "Cato saying 2"
+        "caption": "I begin to speak only when I'm certain what I'll say isn't better left unsaid."
     },
     {
         "id": 23,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca1.jpeg",
-        "caption": "Senca saying 1"
+        "caption": "Joy comes to us from those whom we love even when they are absent."
     },
     {
         "id": 24,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca2.jpeg",
-        "caption": "Senca saying 2"
+        "caption": "You can tell the character of every man when you see how he gives and receives praise."
     },
     {
         "id": 25,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca3.jpeg",
-        "caption": "Senca saying 3"
+        "caption": "Everything hangs on one's thinking.... A man is as unhappy as he has convinced himself he is."
     },
     {
         "id": 26,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca4.jpeg",
-        "caption": "Senca saying 4"
+        "caption": "Most powerful is he who has himself in his own power."
     },
     {
         "id": 27,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca5.jpeg",
-        "caption": "Senca saying 5"
+        "caption": "If my wealth goes away, it takes with it nothing but itself."
     },
     {
         "id": 28,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca6.jpeg",
-        "caption": "Senca saying 6"
+        "caption": "Nothing delights the mind as much as loving and loyal friendship."
     },
     {
         "id": 29,
         "stoicId": 4,
         "imageUrl": "assets/images/stoicImages/senca7.jpeg",
-        "caption": "Senca saying 7"
+        "caption": "Just as rich fields must not be forced... so constant work on the anvil will fracture the force of the mind."
     },
     {
         "id": 30,
         "stoicId": 5,
         "imageUrl": "assets/images/stoicImages/zeno1.jpg",
-        "caption": "Zeno of Citium saying 1"
+        "caption": "Man conquers the world by conquering himself."
     },
     {
         "id": 31,
         "stoicId": 6,
         "imageUrl": "assets/images/stoicImages/chrysippus1.jpeg",
-        "caption": "Chrysippus saying 1"
+        "caption": "If I followed the multitude, I should not have studied philosophy."
     }, 
     {
         "id": 32,
         "stoicId": 7,
         "imageUrl": "assets/images/stoicImages/cleanthes1.jpg",
-        "caption": "Cleanthes saying 1"
+        "caption": "The willing are led by fate, the reluctant are dragged"
     },
     {
         "id": 33,
         "stoicId": 10,
         "imageUrl": "assets/images/stoicImages/donaldrobertson1.jpg",
-        "caption": "Donald Robertson saying 1"
+        "caption": "We see the flaws of others quite clearly, in other words, but we have a blind spot for our own."
     },
     {
         "id": 34,
         "stoicId": 9,
         "imageUrl": "assets/images/stoicImages/johndewey1.jpg",
-        "caption": "John Dewey saying 1"
+        "caption": "We do not learn from experience, we learn from reflecting on experience."
     },
     {
         "id": 35,
         "stoicId": 8,
         "imageUrl": "assets/images/stoicImages/ryanholiday1.jpg",
-        "caption": "Ryan Holiday saying 1"
+        "caption": "Anger is not impressive or tough, it's a mistake. It's weakness."
     }
 ]

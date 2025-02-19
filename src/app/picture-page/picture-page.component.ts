@@ -5,6 +5,7 @@ import { StoicImages } from '../models/Stoic-Images.model';
 import { Stoic } from '../models/Stoic.model';
 import { StoicAPIService } from '../services/stoicAPI.service';
 import { OnInit } from '@angular/core';
+import { StoicQuotes } from '../models/Stoic-Quotes.model';
 
 @Component({
     selector: 'app-picture-page',
@@ -15,6 +16,11 @@ import { OnInit } from '@angular/core';
 export class PicturePageComponent implements OnInit {
   stoicImages: StoicImages[] = [];
   stoics: Stoic[] = [];
+
+  selectedStoic: StoicImages[] = [];
+  stoicProfiles: StoicQuotes[] = [];  
+
+
 
 
   constructor(
@@ -28,10 +34,12 @@ export class PicturePageComponent implements OnInit {
       this.stoicImages = data;
       console.log(this.stoicImages);
     });
+
     this.stoicAPIService.getStoics().subscribe((data) => {
       this.stoics = data;
       console.log(this.stoics);
-    })
+    });
+
   }
 
   routeToPage(page: string) {
@@ -43,5 +51,11 @@ export class PicturePageComponent implements OnInit {
       .catch((error) => {
         console.error('Navigation to ' + page + ' failed:', error);
       });
+  }
+
+
+  displayStoicImage(stoicId: number){
+    this.selectedStoic = this.stoicImages.filter((stoic) => stoic.stoicId === stoicId);
+    console.log(this.selectedStoic); 
   }
 }
