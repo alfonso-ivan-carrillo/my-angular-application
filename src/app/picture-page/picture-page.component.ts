@@ -5,7 +5,7 @@ import { StoicImages } from '../models/Stoic-Images.model';
 import { Stoic } from '../models/Stoic.model';
 import { StoicAPIService } from '../services/stoicAPI.service';
 import { OnInit } from '@angular/core';
-import { StoicQuotes } from '../models/Stoic-Quotes.model';
+import { StoicProfiles } from '../models/Stoic-Profiles.model';
 
 @Component({
     selector: 'app-picture-page',
@@ -18,7 +18,8 @@ export class PicturePageComponent implements OnInit {
   stoics: Stoic[] = [];
 
   selectedStoic: StoicImages[] = [];
-  stoicProfiles: StoicQuotes[] = [];  
+  stoicProfiles: StoicProfiles[] = [];  
+  profile: StoicProfiles;
 
 
 
@@ -55,7 +56,25 @@ export class PicturePageComponent implements OnInit {
 
 
   displayStoicImage(stoicId: number){
-    this.selectedStoic = this.stoicImages.filter((stoic) => stoic.stoicId === stoicId);
+    this.selectedStoic = this.stoicImages.filter((stoic) => stoic.id === stoicId);
     console.log(this.selectedStoic); 
   }
+
+
+  buildProfile(){
+    let stoics;
+    let stoicImages;
+    this.stoicAPIService.getStoics().subscribe((data) => {
+      stoics = data;
+    });
+    this.stoicImageAPIService.getStoicImages().subscribe((data) => {
+      stoicImages = data;
+    })
+
+    for(let stoic of stoics){
+    
+    }
+  }
+
+
 }
