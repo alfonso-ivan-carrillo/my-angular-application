@@ -21,6 +21,7 @@ import { UppercaseOnly } from './directives/uppercase-only.directive';
 import { SuperHeroComponent } from './super-hero/super-hero.component';
 import { AlphaOnlyDirective } from './directives/alpha-only.directive';
 import { NumberOnlyDirective } from './directives/numeric-only.directive';
+import { EmitterPageComponent } from './emitter-page/emitter-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { NumberOnlyDirective } from './directives/numeric-only.directive';
     PicturePageComponent,
     StoicPageComponent,
     RandomBookModalComponent,
-    SuperHeroComponent
+    SuperHeroComponent,
   ],
   imports: [
     BrowserModule,
