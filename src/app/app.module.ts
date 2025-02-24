@@ -21,7 +21,7 @@ import { UppercaseOnly } from './directives/uppercase-only.directive';
 import { SuperHeroComponent } from './super-hero/super-hero.component';
 import { AlphaOnlyDirective } from './directives/alpha-only.directive';
 import { NumberOnlyDirective } from './directives/numeric-only.directive';
-import { EmitterPageComponent } from './emitter-page/emitter-page.component';
+import { OffCanvasComponent} from './off-canvas/off-canvas.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { EmitterPageComponent } from './emitter-page/emitter-page.component';
     AlphaNumeric,
     UppercaseOnly,
     AlphaOnlyDirective,
-    NumberOnlyDirective
+    NumberOnlyDirective,
+    OffCanvasComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
