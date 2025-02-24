@@ -1,13 +1,12 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import {Offcanvas} from 'bootstrap';
+import { OffCanvasComponent } from '../off-canvas/off-canvas.component';
 import { CommonModule } from '@angular/common';
 import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-emitter-page',
-  imports: [CommonModule],
-  standalone: true,
+  standalone: false,
   templateUrl: './emitter-page.component.html',
   styleUrl: './emitter-page.component.css'
 })

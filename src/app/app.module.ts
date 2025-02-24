@@ -22,6 +22,7 @@ import { SuperHeroComponent } from './super-hero/super-hero.component';
 import { AlphaOnlyDirective } from './directives/alpha-only.directive';
 import { NumberOnlyDirective } from './directives/numeric-only.directive';
 import { OffCanvasComponent} from './off-canvas/off-canvas.component';
+import { EmitterPageComponent } from './emitter-page/emitter-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,8 @@ import { OffCanvasComponent} from './off-canvas/off-canvas.component';
     StoicPageComponent,
     RandomBookModalComponent,
     SuperHeroComponent,
+    OffCanvasComponent,
+    EmitterPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,6 @@ import { OffCanvasComponent} from './off-canvas/off-canvas.component';
     UppercaseOnly,
     AlphaOnlyDirective,
     NumberOnlyDirective,
-    OffCanvasComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

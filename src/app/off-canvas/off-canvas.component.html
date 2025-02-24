@@ -1,80 +1,33 @@
-<div class="card">
-  <!-- ...existing card content... -->
-</div>
-
-<!-- Add this outside the card div -->
-<div
-  class="offcanvas offcanvas-start"
-  tabindex="-1"
-  id="offCanvasExample"
-  aria-labelledby="offCanvasExampleLabel"
->
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offCanvasExampleLabel">Menu</h5>
-    <button
-      type="button"
-      class="btn-close"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"
-    ></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>Some text content here</div>
-  </div>
-</div>
-
-<a
-  class="btn btn-primary"
-  data-bs-toggle="offcanvas"
-  href="#offcanvasExample"
-  role="button"
-  aria-controls="offcanvasExample"
->
-  Link with href
-</a>
-<button
-  class="btn btn-primary"
-  type="button"
-  data-bs-toggle="offcanvas"
-  data-bs-target="#offcanvasExample"
-  aria-controls="offcanvasExample"
->
-  Button with data-bs-target
-</button>
-
-<div
-  class="offcanvas offcanvas-end"
-  tabindex="-1"
-  id="offcanvasExample"
-  aria-labelledby="offcanvasExampleLabel"
->
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-    <button
-      type="button"
-      class="btn-close"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"
-    ></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have
-      chosen. Like, text, images, lists, etc.
-    </div>
-    <div class="dropdown mt-3">
+<div class="container">
+  <div class="row">
+    <p>
       <button
-        class="btn btn-secondary dropdown-toggle"
+        class="btn btn-primary"
         type="button"
-        data-bs-toggle="dropdown"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
       >
-        Dropdown button
+        Button with data-bs-target
       </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        Who is then invincible? The one who cannot be upset by anything outside their reasoned choice.
+      </div>
+      <div
+          class="img-container text-center"
+          style="width: 200px; height: 300px"
+        >
+          <img
+            src="img-fluid"
+            class="rounded mt-2"
+            style="width: 200px; height: 300px"
+            src="assets/images/stoicImages/epictetus1.jpeg"
+            alt="stoic image"
+          />
+        </div>
     </div>
   </div>
 </div>

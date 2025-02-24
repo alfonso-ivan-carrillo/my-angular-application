@@ -9,6 +9,7 @@ import { PicturePageComponent } from './picture-page/picture-page.component';
 import { StoicPageComponent } from './stoic-page/stoic-page.component';
 import { SuperHeroComponent } from './super-hero/super-hero.component';
 import { EmitterPageComponent } from './emitter-page/emitter-page.component';
+import { OffCanvasComponent } from './off-canvas/off-canvas.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'stoic-page', component: StoicPageComponent },
   { path: 'super-hero', component: SuperHeroComponent },
   { path: 'emitter-page', component: EmitterPageComponent },
+  { path: 'off-canvas', component: OffCanvasComponent}
 ];
 
 @NgModule({
